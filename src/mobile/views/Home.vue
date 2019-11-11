@@ -43,6 +43,25 @@
         <img src="@/assets/img/map.png" alt="">
         <Raduis color="#000"></Raduis>
       </div>
+      <!--联系我们-->
+      <div class="contact">
+        <Title text="联系我们"></Title>
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" >
+          <el-form-item prop="user_name" class='form-item-input input-name'>
+            <label >姓名 | NAME</label>
+            <el-input type="text" maxlength='8' v-model="ruleForm.user_name" ></el-input>
+          </el-form-item>
+          <el-form-item prop="user_phone" class='form-item-input input-phone'>
+            <label >电话 | PHONE</label>
+            <el-input type="tel" maxlength="11"  v-model="ruleForm.user_phone"></el-input>
+          </el-form-item>
+          <el-form-item  prop="user_message" class='form-item-textarea' >
+            <label >留言 | MESSAGE</label>
+            <el-input type="textarea" maxlength="120" v-model="ruleForm.user_message" autocomplete="off"></el-input>
+          </el-form-item>
+        </el-form>
+        <Raduis color="#000"></Raduis>
+      </div>
     </div>
 </template>
 
@@ -61,10 +80,95 @@
           Title,
           Raduis
         },
-        methods: {}
+        methods: {},
+        data(){
+          var validatename = (rule, value, callback) => {
+            if (value === '') {
+              callback(new Error('请输入姓名'));
+            } else {
+              callback();
+            }
+          };
+          var validatephone = (rule, value, callback) => {
+            if (value === '') {
+              callback(new Error('请输入手机号'));
+            } else {
+              if(!(/^1[3456789]\d{9}$/.test(value))){
+                callback(new Error('手机号格式不正确'));
+              }else{
+                callback();
+              }
+
+            }
+          };
+          var validatemessage = (rule, value, callback) => {
+            if (value === '') {
+              callback(new Error('请输入留言信息'));
+            } else {
+              callback();
+            }
+          };
+            return{
+              ruleForm:{
+                user_name:'',
+                user_phone:'',
+                user_message:'',
+              },
+
+              rules: {
+                user_name: [
+                  { validator: validatename, trigger: 'blur' }
+                ],
+                user_phone: [
+                  { validator: validatephone, trigger: 'blur' }
+                ],
+                user_message: [
+                  { validator: validatemessage, trigger: 'blur' }
+                ]
+              }
+            }
+        }
     }
 </script>
+<style lang="scss">
+  .contact{
 
+  .el-form{
+    padding: 0 0.213rem;
+  .input-name{
+  input{
+    width: 5rem;
+    height: 1.173rem;
+  }
+  }
+  .input-phone{
+  input{
+    width:7.027rem;
+    height:1.173rem;
+  }
+  }
+  .form-item-textarea{
+    textarea{
+      width:9.653rem;
+      height:4.48rem;
+      border-radius:0.293rem;
+      background:rgba(243,243,243,1);
+      box-shadow:0rem 0.013rem 0rem 0rem rgba(255,255,255,1);
+    }
+  }
+  label{
+    color: #595959;
+    font-size: 0.267rem;
+  }
+  input{
+    background:rgba(243,243,243,1);
+    box-shadow:0rem 0.013rem 0rem 0rem rgba(255,255,255,1);
+    border-radius:0.587rem;
+  }
+  }
+
+  }
+</style>
 <style scoped lang="scss">
     .Home {
       .text{
@@ -113,5 +217,6 @@
           margin-top: 0.533rem;
         }
       }
+
     }
 </style>
