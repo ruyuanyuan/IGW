@@ -1,2 +1,29 @@
-# IGW
-IGW是基于区块链技术构建的全新未来游戏经济生态基础设施我们致力于服务游戏生态内的所有参与者，  对行业资源进行再分配，创造一个更公平的游戏世界！
+# gwi
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
