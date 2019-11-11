@@ -1,8 +1,7 @@
 <template>
     <div class="Header">
-        <div>
-          额开发活动回馈
-        </div>
+      <div class="left"><img src="@/assets/img/logo.png" alt=""></div>
+      <div class="right"><i class="el-icon-s-operation"></i></div>
     </div>
 </template>
 
@@ -22,7 +21,22 @@
 
 <style scoped lang="scss">
     .Header {
-      width: 100%;
-      height: 1rem;
+      height:1rem;
+      padding: 0 0.213rem;
+      background:rgba(0,0,0,1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left{
+        width: 0.667rem;
+        height: 0.667rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .right{
+        color: #fff;
+      }
     }
 </style>

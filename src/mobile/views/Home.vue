@@ -1,9 +1,10 @@
 <template>
     <div class="Home">
-      <div class="header">
-        <div class="left"><img src="@/assets/img/logo.png" alt=""></div>
-        <div class="right"><i class="el-icon-s-operation"></i></div>
-      </div>
+      <!--<div class="header">-->
+        <!--<div class="left"><img src="@/assets/img/logo.png" alt=""></div>-->
+        <!--<div class="right"><i class="el-icon-s-operation"></i></div>-->
+      <!--</div>-->
+      <Header></Header>
       <div class="footer">
         <div class="title">合作机构</div>
         <div class="img-box">
@@ -75,6 +76,7 @@
 </template>
 
 <script>
+   import Header from "../components/Header"
     export default {
         name: "Home",
         created() {
@@ -84,7 +86,7 @@
 
         },
         compontents: {
-
+          Header
         },
         methods: {}
     }
