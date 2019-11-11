@@ -43,6 +43,10 @@
         <img src="@/assets/img/map.png" alt="">
         <Raduis color="#000"></Raduis>
       </div>
+      <!--路线图-->
+      <div class="route">
+        <!--<img class="graph" src="@/assets/img/bg2.png" alt="">-->
+      </div>
       <!--联系我们-->
       <div class="contact">
         <Title text="联系我们"></Title>
@@ -217,6 +221,14 @@
           margin-top: 0.533rem;
         }
       }
-
+      .route{
+          width: 100%;
+          height: 10rem;
+          position: relative;
+          overflow: hidden;
+          background: url("../../assets/img/bg2.png") 0 0 no-repeat;
+          background-size: 100% 100%;
+          transform: rotate(90deg);
+      }
     }
 </style>
