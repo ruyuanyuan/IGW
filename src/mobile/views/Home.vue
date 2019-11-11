@@ -85,7 +85,7 @@
         mounted() {
 
         },
-        compontents: {
+        components: {
           Header
         },
         methods: {}

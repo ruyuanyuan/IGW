@@ -17,7 +17,7 @@
       mounted() {
 
       },
-      compontents: {
+      components: {
         Header,
         Footer
       },

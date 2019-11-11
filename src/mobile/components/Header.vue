@@ -8,8 +8,12 @@
 <script>
     export default {
         name: "Header",
+        data(){
+          return {
+            
+          }
+        },
         created() {
-
         },
         mounted() {
 
