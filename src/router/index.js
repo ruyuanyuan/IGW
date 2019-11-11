@@ -21,10 +21,31 @@ const routes = [
   }
 ]
 
+const mobileRoutes = [
+  {
+    path: '/mobile',
+    name: 'mobile-index',
+    component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Index.vue'),
+    children: [
+      {
+        path: '',
+        name: 'mobile-home',
+        component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Home.vue'),
+      },
+      {
+        path: 'technology',
+        name: 'mobile-technology',
+        component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Technology.vue'),
+      }
+    ]
+  }
+]
+
+
 const router = new VueRouter({
   // mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes: routes.concat(mobileRoutes)
 })
 
 export default router
