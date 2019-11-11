@@ -1,6 +1,6 @@
 <template>
     <div class="Radius">
-      <div class="gwi-row-more" :style="{background:bg}">点击了解更多</div>
+      <div class="gwi-row-more" :style="{background:bg,color:color}">点击了解更多</div>
     </div>
 </template>
 
@@ -10,6 +10,9 @@
         props:{
           bg: {
             default: "transparent"
+          },
+          color: {
+            default: "#fff"
           }
         },
         created() {

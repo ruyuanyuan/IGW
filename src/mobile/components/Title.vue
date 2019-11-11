@@ -25,7 +25,7 @@
     .Title {
       .gwi-row-title{
         font-size: 0.427rem;
-        margin: 0 auto;
+        margin: 0.533rem auto;
         display: flex;
         align-items: center;
         justify-content: center;
