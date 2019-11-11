@@ -32,7 +32,7 @@ export default {
         },
         {
           lable: "宏观分析",
-          router: "/"
+          router: "/analysis"
         },
         {
           lable: "IGW商业模式",
@@ -44,13 +44,13 @@ export default {
             },
             {
               lable: "IGW Basics",
-              router: ""
+              router: "/business"
             }
           ]
         },
         {
           lable: "技术优势",
-          router: ""
+          router: "/skill"
         },
         {
           lable: "基金会",
@@ -66,7 +66,7 @@ export default {
         },
         {
           lable: "合作机构",
-          router: ""
+          router: "/cooperate"
         },
         {
           lable: "联系我们",
@@ -148,6 +148,7 @@ export default {
             width:100%;
             position: absolute;
             top:42px;
+            z-index: 100;
             .gwi-menu-item{
               background: #0A1032;
               width:100%;
