@@ -237,7 +237,7 @@
           .left {
             text-align: right;
             width: 5.4rem;
-            padding-top: 0.2rem;
+            padding-top: 0.4rem;
 
             div {
               color: #252525;
