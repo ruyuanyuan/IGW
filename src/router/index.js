@@ -25,21 +25,25 @@ const mobileRoutes = [
   {
     path: '/mobile',
     name: 'mobile-index',
-    component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Index.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Index.vue'),
     children: [
       {
         path: '',
         name: 'mobile-home',             // 移动端首页
-        component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Home.vue'),
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Home.vue'),
       },
       {
         path: 'technology',
         name: 'mobile-technology',       // 移动端技术
-        component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Technology.vue'),
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Technology.vue'),
       },{
         path: 'intro',
-        name: 'mobile-intro',       // 移动端技术
-        component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Intro.vue'),
+        name: 'mobile-intro',       // 移动端简介
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Intro.vue'),
+      },{
+        path: 'contact',
+        name: 'mobile-contact',       // 移动端联系我们
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/ContactUs.vue'),
       }
     ]
   }
