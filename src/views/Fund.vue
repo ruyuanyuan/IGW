@@ -142,7 +142,6 @@ export default {
         display: flex;
         justify-content: space-between;
         .fund-row-left{
-          font-size:12px;
           line-height:30px;
           width:50%;
         }

@@ -63,7 +63,13 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import(/* webpackChunkName: "media" */ '../views/Contact.vue')
+  },
+  {
+    path: '/economy',
+    name: 'economy',
+    component: () => import(/* webpackChunkName: "media" */ '../views/Economy.vue')
   }
+  
   
 ]
 

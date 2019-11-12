@@ -192,7 +192,7 @@ export default {
           display: inline-block;
           margin-right:5px;
           background: #1862E9;
-          font-size: 10px;
+          font-size: 12px;
           color:#fff;
           line-height: 15px;
           text-align: center;
@@ -221,7 +221,6 @@ export default {
             font-size: 18px;
           }
           .book_p{
-            font-size:12px;
           }
           &:hover{
             background: #1862E9;

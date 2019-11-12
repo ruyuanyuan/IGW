@@ -36,7 +36,6 @@
       }
       .gwi-row-right{
         width:50%;
-        font-size:12px;
         color:#333333;
         line-height: 30px;
         letter-spacing: 2px;

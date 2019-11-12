@@ -58,7 +58,7 @@ export default {
         },
         {
           lable: "通证经济",
-          router: ""
+          router: "/economy"
         },
         {
           lable: "发展路线",
@@ -84,7 +84,7 @@ export default {
 <style lang="scss">
   .header_template{
     width:100%;
-    height:42px;
+    height:56px;
     background:#0A1032;
     .header_content{
       display: flex;
@@ -109,10 +109,10 @@ export default {
         flex:1;
         .gwi-menu-item{
           text-align: center;
-          line-height: 42px;
+          line-height: 56px;
           cursor: pointer;
           position: relative;
-          width:90px;
+          width:85px;
           a{
             color: #fff;
             font-weight:400;

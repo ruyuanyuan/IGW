@@ -131,7 +131,6 @@ export default {
         display: flex;
         justify-content: space-between;
         .gw-row-title{
-          font-size:12px;
           color:#fff;
           margin:25px 0;
         }
@@ -163,7 +162,6 @@ export default {
         width:100%;
         .gw-row-me-title{
           width:100%;
-          font-size:12px;
           color:#727272;
           margin-bottom: 30px;
         }
@@ -199,7 +197,6 @@ export default {
               font-weight: 600;
             }
             .gw-write-item-p{
-              font-size:12px;
               color:#727272;
               line-height: 24px;
             }
@@ -218,7 +215,6 @@ export default {
               font-weight: 600;
             }
             .gw-write-item-p{
-              font-size:12px;
               color:#727272;
               line-height: 24px;
             }

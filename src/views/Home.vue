@@ -335,7 +335,6 @@ export default {
           span{
             display: block;
             margin-top:30px;
-            font-size:12px;
             color:#07070D;
           }
         }
@@ -404,7 +403,6 @@ export default {
         justify-content: space-between;
         margin-bottom: 40px;
         .fund-row-left{
-          font-size:12px;
           line-height:30px;
           width:50%;
         }
@@ -441,7 +439,7 @@ export default {
           width:50%;
           label{
             color:#595959;
-            font-size:10px;
+            font-size:12px;
             display: block;
             margin-bottom: 10px;
           }
@@ -482,7 +480,7 @@ export default {
           margin-top:20px;
           label{
             color:#595959;
-            font-size:10px;
+            font-size:12px;
             display: block;
             margin-bottom: 10px;
           }

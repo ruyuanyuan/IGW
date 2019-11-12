@@ -210,7 +210,6 @@ export default {
             .interflow-item-p{
               margin-top:10px;
               color:#595959;
-              font-size:12px;
               line-height: 30px;
             }
           }
