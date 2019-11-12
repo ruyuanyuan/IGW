@@ -6,6 +6,7 @@
       <!--技术架构-->
       <div class="architecture">
         <Underline text="技术架构"></Underline>
+        <img src="@/assets/mobileImage/technology_03.png" alt="">
         <div class="text">
           IGW采用分层式技术架构。最底层为实现P2P分布式网络的网络层；第二层为存储区块数据和K-V数据的数据层，采用LEVELDB作为结构化数据的主要支撑；第三层为共识层，实现共识算法，处理节点识别和数据同步，主要同步区块数据和智能合约状态数据；最顶层为合约层，提供智能合约虚拟机和API接口，提供认证模块用于节点的顶层认证识别。
         </div>
@@ -77,6 +78,12 @@
       .architecture{
         background: #fff;
         padding: 0 0.213rem;
+        img{
+          width: 100%;
+          height: auto;
+          display: block;
+          margin-bottom: 0.8rem;
+        }
         .text{
           font-size: 0.24rem;
           color: #595959;
