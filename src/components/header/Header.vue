@@ -40,7 +40,7 @@ export default {
           children: [
             {
               lable: "全球游戏生态联盟",
-              router: ""
+              router: "/ecology"
             },
             {
               lable: "IGW Basics",
@@ -54,6 +54,10 @@ export default {
         },
         {
           lable: "基金会",
+          router: "/fund"
+        },
+        {
+          lable: "通证经济",
           router: ""
         },
         {
@@ -70,7 +74,7 @@ export default {
         },
         {
           lable: "联系我们",
-          router: ""
+          router: "/contact"
         }
       ]
     };

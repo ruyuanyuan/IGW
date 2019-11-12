@@ -48,6 +48,21 @@ const routes = [
     path: '/platform',
     name: 'platform',
     component: () => import(/* webpackChunkName: "media" */ '../views/Platform.vue')
+  },
+  {
+    path: '/fund',
+    name: 'fund',
+    component: () => import(/* webpackChunkName: "media" */ '../views/Fund.vue')
+  },
+  {
+    path: '/ecology',
+    name: 'ecology',
+    component: () => import(/* webpackChunkName: "media" */ '../views/Ecology.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import(/* webpackChunkName: "media" */ '../views/Contact.vue')
   }
   
 ]
