@@ -14,7 +14,7 @@
             <p>总量：1,000,000,000 IGC</p>
           </div>
           <div class="table-box">
-            <table class='table'>
+            <table class='table' cellspacing="0">
               <thead>
                 <tr>
                   <th>分配</th>
@@ -52,6 +52,52 @@
                   <td>生态激励</td>
                   <td>500,000,000</td>
                   <td>社群激励 未来10年陆续释放</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class='chart-box'>
+            <img src="@/assets/img/char2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gwi-row table-row  table2-row">
+      <div class="gwi-row-content">
+        <div class="table-content">
+          <div class='gwi-row-h'>通证互换</div>
+          <div class="table-box">
+            <table class='table' cellspacing="0">
+              <thead>
+                <tr>
+                  <th>轮次</th>
+                  <th>IGC发行量</th>
+                  <th>总量占比</th>
+                  <th>价值比率</th>
+                  <th>起止日期</th>
+                  <th>状态</th>
+                  <th>锁定期</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>15,000,000</td>
+                  <td>1.5%</td>
+                  <td>1 USDT ≈ 19 IGC	</td>
+                  <td>2019.03.01-2019.03.15	</td>
+                  <td>结束</td>
+                  <td> 交易所首发日期起锁定期2个月，第3个月起每月释放10% </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>25,000,000</td>
+                  <td>2.5%</td>
+                  <td>1 USDT ≈ 11 IGC</td>
+                  <td>	2019.04.01-2019.04.30</td>
+                  <td>结束</td>
+                  <td> 交易所首发日期起锁定期2个月，
+ 第3个月起每月释放3%</td>
                 </tr>
               </tbody>
             </table>
@@ -105,7 +151,22 @@ export default {
          
         }
       }
-      
+      .chart-box{
+        text-align: right;
+        margin-top:30px;
+        img{
+          width:60%;
+        }
+      }
+    }
+  }
+  .table2-row{
+    background:#EDF0F5;
+    .table-content .table-box .table td:nth-child(3){
+      width:60px;
+    }
+    .table-content .table-box .table td:nth-child(7){
+      width:210px;
     }
   }
 }

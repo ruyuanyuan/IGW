@@ -1,12 +1,12 @@
 <template>
   <div class="header_template">
     <div class='header_content'>
-      <div class="logo_img"><img src="@/assets/img/logo.png" alt=""></div>
+      <div class="logo_img"> <router-link to='/'><img src="@/assets/img/logo.png" alt=""></router-link></div>
       <div class="gwi-menu">
         <div v-for="(item,index) in menu" :key="index">
           <div class="gwi-menu-item" v-if='!item.children'>
             <router-link :to='item.router'>{{item.lable}}</router-link>
-            <div class='gwi-line'></div>
+            <div class='gwi-line' :class='routePath===item.router?"active":""'></div>
           </div>
           <div class="gwi-menu-group" v-if='item.children'>
             <div class='gwi-menu-group-title'><router-link :to='item.router'>{{item.lable}}</router-link></div>
@@ -76,8 +76,14 @@ export default {
           lable: "联系我们",
           router: "/contact"
         }
-      ]
+      ],
+      routePath:'/'
     };
+  },
+  watch:{
+    $route(to,from){
+      this.routePath = to.path;
+    }
   }
 };
 </script>
@@ -124,7 +130,11 @@ export default {
             background:#1862E9;
             width:0;
             transition: all 0.2s linear;
+            &.active{
+              width:100%;
+            }
           }
+          
           &:hover{
             .gwi-line{
               width:100%;

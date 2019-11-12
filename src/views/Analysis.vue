@@ -121,6 +121,9 @@ export default {
           img{
             width:100%;
           }
+          &:hover{
+            box-shadow:0px 10px 4px 1px rgba(0, 0, 0, 0.1);
+          }
         }
       }
       .chart_doc_item{
@@ -175,6 +178,10 @@ export default {
           }
           img{
             width:100%;
+          }
+          transition: all 0.2s linear;
+          &:hover{
+            transform: scale(1.1)
           }
         }
       }
