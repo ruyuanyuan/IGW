@@ -41,8 +41,9 @@
 
 <style scoped lang="scss">
     .Team {
+      background: #fff;
       .box{
-        width: 6.4rem;
+        width: 7rem;
         border-bottom: 0.027rem solid #BFBFBF;
         margin: 0 auto;
         text-align: center;
@@ -50,7 +51,7 @@
           margin: 0.72rem 0;
         }
         p{
-          font-size: 0.24rem;
+          font-size: 0.3rem;
           color: #555;
           &:last-child{
             margin-bottom: 1.067rem;
