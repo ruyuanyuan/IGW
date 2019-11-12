@@ -38,12 +38,16 @@ const mobileRoutes = [
         component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Technology.vue'),
       },{
         path: 'intro',
-        name: 'mobile-intro',       // 移动端简介
+        name: 'mobile-intro',            // 移动端简介
         component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Intro.vue'),
       },{
         path: 'contact',
-        name: 'mobile-contact',       // 移动端联系我们
+        name: 'mobile-contact',          // 移动端联系我们
         component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/ContactUs.vue'),
+      },{
+        path: 'development',
+        name: 'mobile-development',       // 移动端发展
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Development.vue'),
       }
     ]
   }
