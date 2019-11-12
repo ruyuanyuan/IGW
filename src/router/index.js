@@ -29,13 +29,17 @@ const mobileRoutes = [
     children: [
       {
         path: '',
-        name: 'mobile-home',
+        name: 'mobile-home',             // 移动端首页
         component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Home.vue'),
       },
       {
         path: 'technology',
-        name: 'mobile-technology',
+        name: 'mobile-technology',       // 移动端技术
         component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Technology.vue'),
+      },{
+        path: 'intro',
+        name: 'mobile-intro',       // 移动端技术
+        component: () => import(/* webpackChunkName: "about" */ '../mobile/views/Intro.vue'),
       }
     ]
   }

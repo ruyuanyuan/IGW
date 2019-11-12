@@ -1,8 +1,6 @@
 <template>
     <div class="Technology">
-      <div class="banner">
-        技术优势
-      </div>
+      <Area text="技术优势" />
       <!--技术架构-->
       <div class="architecture">
         <Underline text="技术架构"></Underline>
@@ -47,6 +45,7 @@
 
 <script>
     import Underline from "../components/Underline"
+    import Area from "../components/Area"
     export default {
         name: "Technology",
         created() {
@@ -56,7 +55,8 @@
 
         },
         components: {
-          Underline
+          Underline,
+          Area
         },
         methods: {}
     }
