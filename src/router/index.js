@@ -48,6 +48,10 @@ const mobileRoutes = [
         path: 'development',
         name: 'mobile-development',       // 移动端发展
         component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Development.vue'),
+      },{
+        path: 'team',
+        name: 'mobile-team',              // 移动端合作机构
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Team.vue'),
       }
     ]
   }
