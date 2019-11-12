@@ -1,5 +1,7 @@
 <template>
     <div class="Home">
+      <!--banner-->
+      <div class="banner"><img src="@/assets/mobileImage/banner.png" alt=""></div>
       <!--IGW简介-->
       <div class="introduce">
         <Title text="IGW简介"></Title>
@@ -7,6 +9,23 @@
           IGW全球游戏生态联盟致力打造一个基于区块链原生的泛社区化游戏平台，聚合游戏玩家、游戏内容生产者、开发者、数字资产交易者等多种泛社区成员，为游戏玩家提供优质的游戏内容，为开发者提供完善的游戏开发模块、数据服务及流量支持，且无中间费用，用户可使用平台通证IGC进行游戏数字资产的自由交易和跨链流通，社区内容完全由社区成员推动而实现自治管理和规范运作。
         </div>
         <Raduis bg="#1862E9"></Raduis>
+      </div>
+      <!--区块链宏观分析-->
+      <div class="blockchain">
+        <Title text="区块链行业宏观分析" color="#fff"></Title>
+        <p class="text1">
+          传统游戏市场日趋成熟的同时
+        </p>
+        <p class="text2">
+          也出现了诸多问题
+        </p>
+        <div class="four">
+          <img src="@/assets/mobileImage/blockchain_05.jpg" alt="">
+          <img src="@/assets/mobileImage/blockchain_07.jpg" alt="">
+          <img src="@/assets/mobileImage/blockchain_14.jpg" alt="">
+          <img src="@/assets/mobileImage/blockchain_17.png" alt="">
+        </div>
+        <Raduis></Raduis>
       </div>
       <!--IGW全球游戏生态联盟-->
       <div class="alliance">
@@ -44,9 +63,7 @@
         <Raduis color="#000"></Raduis>
       </div>
       <!--路线图-->
-      <div class="route">
-        <!--<img class="graph" src="@/assets/img/bg2.png" alt="">-->
-      </div>
+      <div class="route"></div>
       <!--联系我们-->
       <div class="contact">
         <Title text="联系我们"></Title>
@@ -175,6 +192,12 @@
 </style>
 <style scoped lang="scss">
     .Home {
+      .banner{
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
       .text{
         font-size: 0.24rem;
         color: #595959;
@@ -229,6 +252,30 @@
           background: url("../../assets/img/bg2.png") 0 0 no-repeat;
           background-size: 100% 100%;
           transform: rotate(90deg);
+      }
+      .blockchain{
+        display: block;
+        background: #1B1349;
+        padding: 0 0.187rem;
+        .four{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          img{
+            width: 4.56rem;
+            height: auto;
+            margin-top: 0.56rem;
+          }
+        }
+        .text1{
+          color: #fff;
+          font-size: 0.373rem;
+        }
+        .text2{
+          color: #fff;
+          font-size: 0.373rem;
+          font-weight: bold;
+        }
       }
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="Title">
-      <div class="gwi-row-title">{{text}}</div>
+      <div class="gwi-row-title" :style="{color: color}">{{text}}</div>
     </div>
 </template>
 
@@ -8,7 +8,8 @@
     export default {
         name: "Title",
         props:{
-          text: String
+          text: String,
+          color: String
         },
         created() {
 
@@ -25,12 +26,11 @@
     .Title {
       .gwi-row-title{
         font-size: 0.427rem;
-        margin: 0.533rem auto;
+        padding: 0.533rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #07070D;
-        margin-bottom: 0.4rem;
         &::before{
           content: '';
           display: inline-block;

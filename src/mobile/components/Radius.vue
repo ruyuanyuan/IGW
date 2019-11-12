@@ -41,6 +41,7 @@
         border-radius:0.587rem;
         font-size:0.32rem;
         color: #fff;
+        border: 1px solid #fff;
       }
     }
 </style>

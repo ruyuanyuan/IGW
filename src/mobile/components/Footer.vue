@@ -142,6 +142,7 @@
           color: #727272;
         }
         .copyright{
+          padding: 0 0.267rem;
           height: 1.067rem;
           display: flex;
           align-items: center;

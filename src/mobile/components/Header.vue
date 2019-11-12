@@ -34,9 +34,10 @@
       .left{
         width: 0.667rem;
         height: 0.667rem;
+        display: flex;
         img{
           width: 100%;
-          height: 100%;
+          height: auto;
         }
       }
       .right{
