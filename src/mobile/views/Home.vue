@@ -53,6 +53,40 @@
         </div>
         <Raduis color="#000"></Raduis>
       </div>
+      <!--IGW BASICS-->
+      <div class="basics">
+        <p>
+          IGW Basics
+        </p>
+        <p>
+          为游戏而生！
+        </p>
+        <div class="texture">
+          <div>
+            <img src="@/assets/img/icon1.png" alt="">
+            社区
+          </div>
+          <div>
+            <img src="@/assets/img/icon2.png" alt="">
+            商店
+          </div>
+        </div>
+        <div class="texture">
+           <div>
+             <img src="@/assets/img/icon3.png" alt="">
+             IM/群
+           </div>
+          <div>
+            <img src="@/assets/img/icon4.png" alt="">
+            钱包
+          </div>
+        </div>
+      </div>
+      <!--powered-->
+      <div class="powered">
+        <img src="@/assets/mobileImage/powerd_03.png" alt="">
+        <Raduis></Raduis>
+      </div>
       <!--IGW基金会-->
       <div class="fund">
         <Title text="IGW基金会"></Title>
@@ -63,7 +97,9 @@
         <Raduis color="#000"></Raduis>
       </div>
       <!--路线图-->
-      <div class="route"></div>
+      <div class="route">
+        <img src="@/assets/mobileImage/time_line_02.png" alt="">
+      </div>
       <!--联系我们-->
       <div class="contact">
         <Title text="联系我们"></Title>
@@ -208,6 +244,7 @@
       }
       .alliance{
         padding: 0 0.187rem;
+        background:rgba(237,239,242,1);
         .img-box{
           display: flex;
           justify-content: space-between;
@@ -245,13 +282,10 @@
         }
       }
       .route{
+        img{
           width: 100%;
-          height: 10rem;
-          position: relative;
-          overflow: hidden;
-          background: url("../../assets/img/bg2.png") 0 0 no-repeat;
-          background-size: 100% 100%;
-          transform: rotate(90deg);
+          height: auto
+        }
       }
       .blockchain{
         display: block;
@@ -275,6 +309,62 @@
           color: #fff;
           font-size: 0.373rem;
           font-weight: bold;
+        }
+      }
+      .basics{
+        padding-left: 0.4rem;
+        padding-top: 1.013rem;
+        padding-bottom: 0.8rem;
+        position: relative;
+        height: 10.533rem;
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -0.4rem;
+          right: 0;
+          width: 6.133rem;
+          height: 7.253rem;
+          /*background: url("../../assets/mobileImage/computer_23.png") no-repeat;*/
+          background: url("../../assets/img/icon_tv.png") no-repeat;
+          background-size: cover;
+        }
+        p:nth-child(1){
+          font-size: 0.88rem;
+          color: #07070D;
+          font-weight: bold;
+        }
+        p:nth-child(2){
+          font-size: 0.587rem;
+          color: #07070D;
+          margin-bottom: 0.933rem;
+        }
+        .texture{
+          display: flex;
+          >div{
+            margin-right: 0.5rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.24rem;
+            color: #07070D;
+            text-align: center;
+          }
+          img{
+            width: 1.413rem;
+            height: auto;
+            display: block;
+            margin-bottom: 0.267rem;
+          }
+        }
+      }
+      .powered{
+        background: #1B1349;
+        padding-top: 1.2rem;
+        padding-bottom: 0.4rem;
+        img{
+          width: 9.6rem;
+          height: auto;
+          margin: 0 auto;
+          display: block;
         }
       }
     }
