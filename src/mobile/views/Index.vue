@@ -1,6 +1,7 @@
 <template>
     <div class="Index">
       <Header></Header>
+      <Menu></Menu>
         <router-view></router-view>
       <Footer></Footer>
     </div>
@@ -9,6 +10,7 @@
 <script>
   import Header from '../components/Header.vue'
   import Footer from '../components/Footer.vue'
+  import Menu from "../components/Menu"
   export default {
       name: "Index",
       created() {
@@ -19,7 +21,8 @@
       },
       components: {
         Header,
-        Footer
+        Footer,
+        Menu
       },
       methods: {
         flexible(){

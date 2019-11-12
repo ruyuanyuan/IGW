@@ -18,7 +18,9 @@
         mounted() {
 
         },
-        compontents: {},
+        compontents: {
+
+        },
         methods: {}
     }
 </script>
