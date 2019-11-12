@@ -38,6 +38,16 @@ const routes = [
     path: '/business',
     name: 'business',
     component: () => import(/* webpackChunkName: "business" */ '../views/Business.vue')
+  },
+  {
+    path: '/media',
+    name: 'media',
+    component: () => import(/* webpackChunkName: "media" */ '../views/Media.vue')
+  },
+  {
+    path: '/platform',
+    name: 'platform',
+    component: () => import(/* webpackChunkName: "media" */ '../views/Platform.vue')
   }
   
 ]

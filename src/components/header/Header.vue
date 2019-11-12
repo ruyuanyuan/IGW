@@ -9,7 +9,7 @@
             <div class='gwi-line'></div>
           </div>
           <div class="gwi-menu-group" v-if='item.children'>
-            <div class='gwi-menu-group-title'>{{item.lable}}</div>
+            <div class='gwi-menu-group-title'><router-link :to='item.router'>{{item.lable}}</router-link></div>
             <div class='gwi-menu-group-content'>
               <div class="gwi-menu-item" v-for='(child,key) in item.children' :key='key'>
                 <router-link :to='child.router'>{{child.lable}}</router-link>
@@ -36,7 +36,7 @@ export default {
         },
         {
           lable: "IGW商业模式",
-          router: "",
+          router: "/business",
           children: [
             {
               lable: "全球游戏生态联盟",
@@ -44,7 +44,7 @@ export default {
             },
             {
               lable: "IGW Basics",
-              router: "/business"
+              router: "/platform"
             }
           ]
         },
@@ -62,7 +62,7 @@ export default {
         },
         {
           lable: "媒体",
-          router: ""
+          router: "/media"
         },
         {
           lable: "合作机构",
@@ -137,6 +137,9 @@ export default {
             cursor: pointer;
             width:100%;
             text-align: center;
+            a{
+              color:#fff;
+            }
           }
           &:hover .gwi-menu-group-content{
             height:80px;
