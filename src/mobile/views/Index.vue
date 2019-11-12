@@ -75,6 +75,6 @@
 
 <style scoped lang="scss">
     .Index {
-
+      padding-top: 1rem;
     }
 </style>

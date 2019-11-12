@@ -226,7 +226,7 @@
             top: 50%;
             margin-top: -0.28rem;
             left: -0.5rem;
-            z-index: 999;
+            z-index: 99;
             transform: rotate(45deg);
           }
 

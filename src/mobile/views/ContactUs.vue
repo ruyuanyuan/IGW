@@ -187,7 +187,7 @@
         .left{
           width: 3.867rem;
           div{
-            margin-bottom: 0.433rem;
+            margin-bottom: 0.633rem;
           }
           p{
             color:#6C6C6C;
@@ -196,11 +196,12 @@
         }
         .right{
           width:4.627rem;
-          height:3.68rem;
           border-radius:0.293rem;
+          overflow: hidden;
           img{
             width: 100%;
-            height: auto;
+            height: 3.68rem;
+            border-radius:0.293rem;
           }
         }
       }

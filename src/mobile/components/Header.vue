@@ -27,6 +27,12 @@
 
 <style scoped lang="scss">
     .Header {
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
       height:1rem;
       padding: 0 0.213rem;
       background:rgba(0,0,0,1);

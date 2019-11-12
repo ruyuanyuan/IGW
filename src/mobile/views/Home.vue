@@ -297,7 +297,7 @@
           flex-wrap: wrap;
           img{
             width: 4.56rem;
-            height: auto;
+            height: 4.987rem;
             margin-top: 0.56rem;
           }
         }
