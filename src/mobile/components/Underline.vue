@@ -1,5 +1,5 @@
 <template>
-    <div class="Underline">
+    <div class="Underline" :style="{color: color}">
        {{text}}
     </div>
 </template>
@@ -10,6 +10,9 @@
         props: {
           text: {
             require: true
+          },
+          color: {
+            default: "#07070D"
           }
         },
         created() {
@@ -30,7 +33,6 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      color: #07070D;
       font-size: 0.4rem;
       margin-bottom: 0.4rem;
       &::after{

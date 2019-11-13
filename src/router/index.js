@@ -52,6 +52,10 @@ const mobileRoutes = [
         path: 'team',
         name: 'mobile-team',              // 移动端合作机构
         component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Team.vue'),
+      },{
+        path: 'macroAnalysis',
+        name: 'mobile-macroAnalysis',     // 移动端宏观分析
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/MacroAnalysis.vue'),
       }
     ]
   }
