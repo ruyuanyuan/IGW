@@ -1,27 +1,27 @@
 <template>
   <div id="app">
-    <Header ></Header>
-    <router-view/>
-    <Footer></Footer>
+    <router-view />
   </div>
 </template>
 <script>
-import Header from '@/components/header/Header.vue'
-import Footer from '@/components/footer/Footer.vue'
 export default {
-  data(){
-    return {
-      
+  data() {
+    return {};
+  },
+  mounted() {
+    if (this._isMobile()) {
+      this.$router.replace("/m");
+    } else {
+      this.$router.replace("/pc");
     }
   },
-  components:{
-    Header,
-    Footer
+  methods: {
+    _isMobile() {
+      let flag = navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+      );
+      return flag;
+    }
   }
-}
+};
 </script>
-<style>
-  #app{
-    padding-top:56px;
-  }
-</style>

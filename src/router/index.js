@@ -4,79 +4,129 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
-  },
-  {
-    path: '/introduce',
-    name: 'introduce',
-    component: () => import(/* webpackChunkName: "introduce" */ '../views/Introduce.vue')
-  },
-  {
-    path: '/history',
-    name: 'history',
-    component: () => import(/* webpackChunkName: "history" */ '../views/History.vue')
-  },
-  {
-    path: '/cooperate',
-    name: 'cooperate',
-    component: () => import(/* webpackChunkName: "cooperate" */ '../views/Cooperate.vue')
-  },
-  {
-    path: '/analysis',
-    name: 'analysis',
-    component: () => import(/* webpackChunkName: "analysis" */ '../views/Analysis.vue')
-  },
-  {
-    path: '/skill',
-    name: 'skill',
-    component: () => import(/* webpackChunkName: "skill" */ '../views/Skill.vue')
-  },
-  {
-    path: '/business',
-    name: 'business',
-    component: () => import(/* webpackChunkName: "business" */ '../views/Business.vue')
-  },
-  {
-    path: '/media',
-    name: 'media',
-    component: () => import(/* webpackChunkName: "media" */ '../views/Media.vue')
-  },
-  {
-    path: '/platform',
-    name: 'platform',
-    component: () => import(/* webpackChunkName: "media" */ '../views/Platform.vue')
-  },
-  {
-    path: '/fund',
-    name: 'fund',
-    component: () => import(/* webpackChunkName: "media" */ '../views/Fund.vue')
-  },
-  {
-    path: '/ecology',
-    name: 'ecology',
-    component: () => import(/* webpackChunkName: "media" */ '../views/Ecology.vue')
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: () => import(/* webpackChunkName: "media" */ '../views/Contact.vue')
-  },
-  {
-    path: '/economy',
-    name: 'economy',
-    component: () => import(/* webpackChunkName: "media" */ '../views/Economy.vue')
+  { 
+    path:'/pc',
+    name:'pc-home',
+    component:()=>import(/* webpackChunkName: "home" */ '@/pc/views/Index.vue'),
+    children:[
+      {
+        path: '',
+        name: 'home',
+        component: () => import(/* webpackChunkName: "home" */ '@/pc/views/Home.vue')
+      },
+      {
+        path: 'introduce',
+        name: 'introduce',
+        component: () => import(/* webpackChunkName: "introduce" */ '@/pc/views/Introduce.vue')
+      },
+      {
+        path: 'history',
+        name: 'history',
+        component: () => import(/* webpackChunkName: "history" */ '@/pc/views/History.vue')
+      },
+      {
+        path: 'cooperate',
+        name: 'cooperate',
+        component: () => import(/* webpackChunkName: "cooperate" */ '@/pc/views/Cooperate.vue')
+      },
+      {
+        path: 'analysis',
+        name: 'analysis',
+        component: () => import(/* webpackChunkName: "analysis" */ '@/pc/views/Analysis.vue')
+      },
+      {
+        path: 'skill',
+        name: 'skill',
+        component: () => import(/* webpackChunkName: "skill" */ '@/pc/views/Skill.vue')
+      },
+      {
+        path: 'business',
+        name: 'business',
+        component: () => import(/* webpackChunkName: "business" */ '@/pc/views/Business.vue')
+      },
+      {
+        path: 'media',
+        name: 'media',
+        component: () => import(/* webpackChunkName: "media" */ '@/pc/views/Media.vue')
+      },
+      {
+        path: 'platform',
+        name: 'platform',
+        component: () => import(/* webpackChunkName: "media" */ '@/pc/views/Platform.vue')
+      },
+      {
+        path: 'fund',
+        name: 'fund',
+        component: () => import(/* webpackChunkName: "media" */ '@/pc/views/Fund.vue')
+      },
+      {
+        path: 'ecology',
+        name: 'ecology',
+        component: () => import(/* webpackChunkName: "media" */ '@/pc/views/Ecology.vue')
+      },
+      {
+        path: 'contact',
+        name: 'contact',
+        component: () => import(/* webpackChunkName: "media" */ '@/pc/views/Contact.vue')
+      },
+      {
+        path: 'economy',
+        name: 'economy',
+        component: () => import(/* webpackChunkName: "media" */ '@/pc/views/Economy.vue')
+      }
+    ]
   }
-  
-  
 ]
+
+const mobileRoutes = [
+  {
+    path: '/m',
+    name: 'mobile-index',
+    component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Index.vue'),
+    children: [
+      {
+        path: '',
+        name: 'mobile-home',             // 移动端首页
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Home.vue'),
+      },
+      {
+        path: 'technology',
+        name: 'mobile-technology',       // 移动端技术
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Technology.vue'),
+      },{
+        path: 'intro',
+        name: 'mobile-intro',            // 移动端简介
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Intro.vue'),
+      },{
+        path: 'contact',
+        name: 'mobile-contact',          // 移动端联系我们
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/ContactUs.vue'),
+      },{
+        path: 'development',
+        name: 'mobile-development',       // 移动端发展
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Development.vue'),
+      },{
+        path: 'team',
+        name: 'mobile-team',              // 移动端合作机构
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Team.vue'),
+      },{
+        path: 'macroAnalysis',
+        name: 'mobile-macroAnalysis',     // 移动端宏观分析
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/MacroAnalysis.vue'),
+      },{
+        path: 'foundation',
+        name: 'mobile-foundation',     // 移动端基金会
+        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Foundation.vue'),
+      }
+    ]
+  }
+]
+
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes: routes.concat(mobileRoutes)
 })
 
 export default router
