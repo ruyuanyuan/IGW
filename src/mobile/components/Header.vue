@@ -22,8 +22,10 @@ export default {
       showMenuEvent(){
         this.showMenu=true
       },
-      changeMenuEvent(flag,path){
-
+      changeMenuEvent(path){
+        this.showMenu=false
+        console.log(path)
+        this.$router.push(path)
       }
     }
 }

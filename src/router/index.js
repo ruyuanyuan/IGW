@@ -75,10 +75,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "media" */ '@/pc/views/Economy.vue')
       }
     ]
-  }
-]
-
-const mobileRoutes = [
+  },
   {
     path: '/m',
     name: 'mobile-index',
@@ -87,46 +84,68 @@ const mobileRoutes = [
       {
         path: '',
         name: 'mobile-home',             // 移动端首页
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Home.vue'),
+        component: () => import(/* webpackChunkName: "home" */ '@/mobile/views/Home.vue'),
       },
       {
         path: 'technology',
         name: 'mobile-technology',       // 移动端技术
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Technology.vue'),
+        component: () => import(/* webpackChunkName: "technology" */ '@/mobile/views/Technology.vue'),
       },{
         path: 'intro',
         name: 'mobile-intro',            // 移动端简介
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Intro.vue'),
+        component: () => import(/* webpackChunkName: "intro" */ '@/mobile/views/Intro.vue'),
       },{
         path: 'contact',
         name: 'mobile-contact',          // 移动端联系我们
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/ContactUs.vue'),
+        component: () => import(/* webpackChunkName: "contact" */ '@/mobile/views/ContactUs.vue'),
       },{
         path: 'development',
         name: 'mobile-development',       // 移动端发展
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Development.vue'),
+        component: () => import(/* webpackChunkName: "development" */ '@/mobile/views/Development.vue'),
       },{
         path: 'team',
         name: 'mobile-team',              // 移动端合作机构
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Team.vue'),
+        component: () => import(/* webpackChunkName: "team" */ '@/mobile/views/Team.vue'),
       },{
         path: 'macroAnalysis',
         name: 'mobile-macroAnalysis',     // 移动端宏观分析
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/MacroAnalysis.vue'),
-      },{
+        component: () => import(/* webpackChunkName: "macroAnalysis" */ '@/mobile/views/MacroAnalysis.vue'),
+      },
+      {
         path: 'foundation',
         name: 'mobile-foundation',     // 移动端基金会
-        component: () => import(/* webpackChunkName: "about" */ '@/mobile/views/Foundation.vue'),
+        component: () => import(/* webpackChunkName: "foundation" */ '@/mobile/views/Foundation.vue'),
+      },
+      {
+        path: 'business',
+        name: 'mobile-business',     // 移动端商业模式
+        component: () => import(/* webpackChunkName: "business" */ '@/mobile/views/Business.vue'),
+      },
+      {
+        path: 'ecology',
+        name: 'mobile-ecology',     // 移动端商业模式
+        component: () => import(/* webpackChunkName: "business" */ '@/mobile/views/Ecology.vue'),
+      },
+      {
+        path: 'media',
+        name: 'mobile-media',     // 移动端商业模式
+        component: () => import(/* webpackChunkName: "media" */ '@/mobile/views/Media.vue'),
+      },
+      {
+        path: 'economy',
+        name: 'mobile-economy',     // 移动端商业模式
+        component: () => import(/* webpackChunkName: "media" */ '@/mobile/views/Economy.vue'),
       }
     ]
   }
 ]
 
 
+
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
-  routes: routes.concat(mobileRoutes)
+  routes: routes
 })
 
 export default router
