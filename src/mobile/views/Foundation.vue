@@ -43,6 +43,53 @@
           </div>
         </div>
       </div>
+      <!--顾问-->
+      <div class="consultant">
+        <Title text="顾问"></Title>
+        <div class="box">
+          <div class="every">
+            <img src="@/assets/mobileImage/character_06.jpg" alt="">
+            <p>中国</p>
+            <p>李大伟</p>
+            <div>
+              ZB联合创始⼈
+            </div>
+          </div>
+          <div class="every">
+            <img src="@/assets/mobileImage/character_03.jpg" alt="">
+            <p>英国</p>
+            <p>Carl Dalio</p>
+            <div>
+              LCSH CFO
+            </div>
+          </div>
+          <div class="every">
+            <img src="@/assets/mobileImage/character_11.jpg" alt="">
+            <p>英国</p>
+            <p>Konnie Brown</p>
+            <div>
+              奥美英国创意总监
+            </div>
+          </div>
+          <div class="every">
+            <img src="@/assets/mobileImage/character_13.jpg" alt="">
+            <p>美国</p>
+            <p>Elon Simons</p>
+            <div>
+              游戏发⾏与商业专家
+            </div>
+          </div>
+          <div class="every">
+            <img src="@/assets/mobileImage/character_18.png" alt="">
+            <p>日本</p>
+            <p>Masaki Uno</p>
+            <div>
+              株式会社 <br/>
+              Global Systems CEO
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 </template>
 
@@ -152,6 +199,28 @@
         height: 0.533rem;
         display: flex;
         justify-content: center;
+      }
+      .box{
+        display: flex;
+        padding: 0 1.733rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .every{
+          font-size: 0.32rem;
+          color: #07070D;
+          margin-bottom: 1.067rem;
+          text-align: center;
+          img{
+            width:2.347rem;
+            height:2.347rem;
+            border-radius:50%;
+            margin-bottom: 0.587rem;
+          }
+          div{
+            margin-top: 0.533rem;
+            font-weight: bold;
+          }
+        }
       }
     }
 </style>
