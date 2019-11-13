@@ -92,6 +92,10 @@ export default {
     width:100%;
     height:56px;
     background:#0A1032;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
     .header_content{
       display: flex;
       width:1000px;

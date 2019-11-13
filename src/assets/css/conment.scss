@@ -76,12 +76,18 @@ body,html{
     &.btn-while{
       border:1px solid #FFF;
       color:#fff;
+      a{
+        color:#fff;
+      }
     }
     &:hover{
       background: #1862E9;
       color:#fff;
       border:1px solid #1862E9;
       cursor: pointer;
+      a{
+        color:#fff;
+      }
     }
   }
   .topnav{
