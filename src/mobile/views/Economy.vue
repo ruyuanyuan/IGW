@@ -1,5 +1,5 @@
 <template>
-  <div class='economy_template'>
+  <div class='mb_economy_template'>
     <Area text="通证经济"/>
     <div class='top-row'>
       <img src="@/assets/mbImg/e1.png" alt="">
@@ -17,7 +17,7 @@ import Area from "../components/Area"
 import Underline from "../components/Underline"
 import Title from "../components/Title"
 export default {
-  name:'economy',
+  name:'mb_economy',
   components:{
     Area,
     Underline,
@@ -26,7 +26,7 @@ export default {
 }
 </script>
 <style lang="scss">
-  .economy_template{
+  .mb_economy_template{
     .top-row{
       width:100%;
       img{

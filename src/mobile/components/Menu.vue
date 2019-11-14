@@ -4,7 +4,7 @@
       <div @click='selectedMenu("/m/macroAnalysis")'>宏观分析</div>
       <div @click='selectedMenu("/m/business")'>IGW商业模式</div>
       <div @click='selectedMenu("/m/ecology")'>全球游戏生态联盟</div>
-      <div @click='selectedMenu("/m/intro")'>IGW Basics</div>
+      <div @click='selectedMenu("/m/platform")'>IGW Basics</div>
       <div @click='selectedMenu("/m/technology")'>技术优势</div>
       <div @click='selectedMenu("/m/foundation")'>基金会</div>
       <div @click='selectedMenu("/m/economy")'>通证经济</div>

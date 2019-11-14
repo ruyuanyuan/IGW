@@ -1,5 +1,5 @@
 <template>
-  <div class='business_template'>
+  <div class='mb_ecology_template'>
     <Area text="IGW全球游戏生态联盟"/>
     <div class='mb-row'>
       <Underline text="Invincible Game world"></Underline>
@@ -111,7 +111,7 @@ import Area from "../components/Area"
 import Underline from "../components/Underline"
 import Title from "../components/Title"
 export default {
-  name:'ecology',
+  name:'mb_ecology',
   components:{
     Area,
     Underline,
@@ -120,7 +120,7 @@ export default {
 }
 </script>
 <style lang="scss">
-  .business_template{
+  .mb_ecology_template{
     .mb-row{
       padding: 0 10px 30px;
       box-sizing: border-box;

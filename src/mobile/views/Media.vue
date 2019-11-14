@@ -51,7 +51,7 @@
 <script>
 import Area from "../components/Area"
 export default {
-  name:'media',
+  name:'mb_media',
   components:{
     Area,
   }

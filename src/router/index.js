@@ -123,18 +123,23 @@ const routes = [
       },
       {
         path: 'ecology',
-        name: 'mobile-ecology',     // 移动端商业模式
-        component: () => import(/* webpackChunkName: "business" */ '@/mobile/views/Ecology.vue'),
+        name: 'mobile-ecology',     // 移动端生态联盟
+        component: () => import(/* webpackChunkName: "ecology" */ '@/mobile/views/Ecology.vue'),
       },
       {
         path: 'media',
-        name: 'mobile-media',     // 移动端商业模式
+        name: 'mobile-media',     // 移动端媒体
         component: () => import(/* webpackChunkName: "media" */ '@/mobile/views/Media.vue'),
       },
       {
         path: 'economy',
-        name: 'mobile-economy',     // 移动端商业模式
-        component: () => import(/* webpackChunkName: "media" */ '@/mobile/views/Economy.vue'),
+        name: 'mobile-economy',     // 移动端通证经济
+        component: () => import(/* webpackChunkName: "economy" */ '@/mobile/views/Economy.vue'),
+      },
+      {
+        path: 'platform',
+        name: 'mobile-platform',     // 移动端平台
+        component: () => import(/* webpackChunkName: "platform" */ '@/mobile/views/Platform.vue'),
       }
     ]
   }
