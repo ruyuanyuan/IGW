@@ -73,6 +73,9 @@ body,html{
     line-height: 36px;
     color:#07070D;
     cursor: pointer;
+    a{
+      color:#07070D;
+    }
     &.btn-while{
       border:1px solid #FFF;
       color:#fff;

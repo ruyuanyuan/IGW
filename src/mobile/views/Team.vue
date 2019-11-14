@@ -48,13 +48,14 @@
         margin: 0 auto;
         text-align: center;
         img{
-          margin: 0.72rem 0;
+          margin: 10px 0;
         }
         p{
-          font-size: 0.3rem;
+          font-size: 12px;
+          line-height: 24px;
           color: #555;
           &:last-child{
-            margin-bottom: 1.067rem;
+            margin-bottom: 30px;
           }
         }
       }

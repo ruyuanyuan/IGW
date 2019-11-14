@@ -82,18 +82,18 @@
           width: 100%;
           height: auto;
           display: block;
-          margin-bottom: 0.8rem;
+          margin-bottom: 20px;
         }
         .text{
-          font-size: 0.24rem;
+          font-size: 12px;
           color: #595959;
-          line-height: 1.8;
-          margin-bottom: 0.933rem;
+          line-height: 24px;
+          margin-bottom: 20px;
         }
       }
       .highlight{
         background: #EDEFF2;
-        padding-bottom: 0.8rem;
+        padding-bottom: 20px;
       }
       .word{
         margin-bottom: 0.6rem;
@@ -103,21 +103,21 @@
         }
         .name{
           display: flex;
-          font-size: 0.32rem;
+          font-size: 14px;
           align-items: center;
           color: #000;
-          margin-bottom: 0.26rem;
+          margin-bottom: 10px;
           .blue-square{
-            width:0.307rem;
-            height:0.307rem;
+            width:15px;
+            height:15px;
             background:rgba(24,98,233,1);
-            margin-right: 0.16rem;
+            margin-right: 10px;
           }
         }
         .desc{
-          font-size: 0.24rem;
+          font-size: 12px;
           color: #595959;
-          line-height: 1.8;
+          line-height: 24px;
         }
       }
     }

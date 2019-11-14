@@ -109,13 +109,11 @@
 <script>
 import Area from "../components/Area"
 import Underline from "../components/Underline"
-import Title from "../components/Title"
 export default {
   name:'mb_ecology',
   components:{
     Area,
-    Underline,
-    Title
+    Underline
   }
 }
 </script>
@@ -126,7 +124,7 @@ export default {
       box-sizing: border-box;
       .mb-text{
         color:#595959;
-        font-size:14px;
+        font-size:12px;
         line-height:24px;
       }
       .mb-img{
@@ -162,9 +160,10 @@ export default {
           }
           .mb-item-doc{
             color:#595959;
-            font-size: 14px;
+            font-size: 12px;
             text-align: left;
             margin-top:15px;
+            line-height: 24px;
           }
           
         }
@@ -179,7 +178,7 @@ export default {
             .mb-doc-p{
               line-height: 24px;
               color:#595959;
-              font-size:14px;
+              font-size:12px;
               margin-top:20px;
             }
           }

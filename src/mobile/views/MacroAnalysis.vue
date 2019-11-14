@@ -214,26 +214,26 @@
         }
       }
       .word{
-        margin-bottom: 0.6rem;
-        padding: 0 0.213rem;
+        margin-bottom: 20px;
+        padding: 0 10px;
         &:last-child{
           margin-bottom: 0!important;
         }
         .name{
           display: flex;
-          font-size: 0.32rem;
+          font-size: 14px;
           align-items: center;
           color: #000;
-          margin-bottom: 0.26rem;
+          margin-bottom: 10px;
           .blue-square{
-            width:0.307rem;
-            height:0.307rem;
+            width:10px;
+            height:10px;
             background:rgba(24,98,233,1);
-            margin-right: 0.16rem;
+            margin-right: 10px;
           }
         }
         .desc{
-          font-size: 0.24rem;
+          font-size: 12px;
           color: #595959;
           line-height: 1.8;
         }
@@ -255,31 +255,31 @@
         }
         .text1{
           color: #fff;
-          font-size: 0.373rem;
+          font-size: 16px;
         }
         .text2{
           color: #fff;
-          font-size: 0.373rem;
+          font-size: 16px;
           font-weight: bold;
         }
       }
       .status{
-        padding: 0 0.187rem;
+        padding: 0 10px;
         color: #595959;
-        font-size: 0.24rem;
+        font-size: 12px;
         > div{
-          margin-bottom: 0.667rem;
-          line-height: 1.8;
+          margin-bottom: 20px;
+          line-height: 24px;
         }
         span{
-          width:0.413rem;
-          height:0.28rem;
+          width:15px;
+          height:15px;
           background:rgba(24,98,233,1);
           color: #fff;
           display: inline-block;
           text-align: center;
-          line-height: 1.6;
-          margin-right: 0.133rem;
+          line-height: 14px;
+          margin-right: 10px;
         }
       }
       .whitePaper{

@@ -14,7 +14,7 @@
           <!-- swiper -->
           <swiper :options="swiperOption">
             <swiper-slide>
-              <img src="@/assets/mobileImage/person_03.png" alt="">
+              <img src="@/assets/mobileImage/man1.png" alt="">
               <div class="job">创始人</div>
               <div class="desc">
                 15年互联⽹行业从业经验，主要从事区块链应用，游戏等领域。从事项⽬运营⼯作12年，熟悉互联⽹业务的产品开发、市场运营等⼯作。
@@ -22,19 +22,17 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/assets/mobileImage/person_03.png" alt="">
-              <div class="job">创始人</div>
+              <img src="@/assets/mobileImage/man2.png" alt="">
+              <div class="job">联合创始⼈</div>
               <div class="desc">
-                15年互联⽹行业从业经验，主要从事区块链应用，游戏等领域。从事项⽬运营⼯作12年，熟悉互联⽹业务的产品开发、市场运营等⼯作。
-                曾任知名公司COO，负责区块链项⽬、⼿机游戏开发、发⾏和运营。
+                资深游戏人，前新加坡奥克资本合伙⼈、首席运营官，负责旗下整体游戏业务。具有市场、运营、产品 多维度从业经验。在游戏、AR/VR、智能硬件等多个领域具有丰富的⾏业经验。 致⼒于区块链技术的落地应⽤及未来游戏市场商业模式⾰命。
               </div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/assets/mobileImage/person_03.png" alt="">
-              <div class="job">创始人</div>
+              <img src="@/assets/mobileImage/man3.png" alt="">
+              <div class="job">首席开发</div>
               <div class="desc">
-                15年互联⽹行业从业经验，主要从事区块链应用，游戏等领域。从事项⽬运营⼯作12年，熟悉互联⽹业务的产品开发、市场运营等⼯作。
-                曾任知名公司COO，负责区块链项⽬、⼿机游戏开发、发⾏和运营。
+                互联⽹和数据网络⾏业资深从业者，擅⻓算法开发、分布式技术。精通Java语言，熟悉区块链原理及相关技术，对BTC、Ethereum等开源区块链算法有深入研究与项⽬实现。 曾被维塔利克邀请共同开发以太坊，受到广⼤以太坊⽤户的好评。
               </div>
             </swiper-slide>
           </swiper>
@@ -144,7 +142,7 @@
 <style lang="scss">
   .dottded{
     .swiper-pagination-bullet{
-      margin: 0 0.1rem;
+      margin: 0 10px;
       display: inline-block;
     }
   }
@@ -152,45 +150,45 @@
 <style scoped lang="scss">
     .Foundation {
       .fund {
-        padding: 0 0.187rem;
+        padding: 0 10px;
         img {
-          width: 9.067rem;
+          width: 100%;
           height: auto;
           display: block;
           margin: 0 auto;
-          margin-top: 0.533rem;
+          margin-top: 20px;
         }
         .text{
-          margin: 0.533rem 0;
+          margin: 10px 0;
           color: #595959;
-          font-size: 0.24rem;
-          line-height: 1.8;
+          font-size: 12px;
+          line-height: 24px;
         }
       }
       .team{
         background:rgba(237,239,242,1);
       }
       .swiper-inner {
-        padding-bottom: 0.667rem;
+        padding-bottom: 20px;
       }
       .swiper-slide {
         width:5.44rem;
-        height:6.8rem;
+        height:auto;
         background:rgba(255,255,255,1);
-        box-shadow:0rem 0.347rem 0.827rem 0.08rem rgba(0, 0, 0, 0.2);
-        padding: 0.187rem;
+        box-shadow:0 10px 10px 10px rgba(0, 0, 0, 0.2);
+        padding: 10px;
         img{
-          width:5.067rem;
-          height:3.08rem;
+          width:100%;
         }
         .job{
           color: #07070D;
-          font-size: 0.293rem;
+          font-size: 14px;
         }
         .desc{
           color: #595959;
-          font-size: 0.24rem;
-          margin-top: 0.293rem;
+          font-size: 12px;
+          line-height: 24px;
+          margin-top: 5px;
         }
       }
       .dottded{
@@ -206,9 +204,9 @@
         justify-content: space-between;
         flex-wrap: wrap;
         .every{
-          font-size: 0.32rem;
+          font-size: 12px;
           color: #07070D;
-          margin-bottom: 1.067rem;
+          margin-bottom: 30px;
           text-align: center;
           img{
             width:2.347rem;

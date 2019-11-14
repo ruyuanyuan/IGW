@@ -134,17 +134,17 @@
               marker: 'square',
               nameStyle:{
                 fill: '#404040',
-                fontSize: '12'
+                fontSize: '14'
               }
-            });
+            })
             chart.point().position('x*y').color("c", c =>{
               if(c == "开发者"){
-                return '#472E9B';
-              };
+                return '#472E9B'
+              }
               return '#FF3A8A';
             }).size('volumes',volumes=>{
               return  volumes * 10;
-            }).shape('with-text');
+            }).shape('with-text')
             chart.render();
           },
           register(){
@@ -153,7 +153,6 @@
                 var size = cfg.size;
                 var x = cfg.x;
                 var y = cfg.y;
-                console.log('cfg',cfg);
                 var circle = container.addShape('Circle', {
                   className: 'point',
                   attrs: {
@@ -163,7 +162,7 @@
                     fill: cfg.color
                   }
                 });
-                var origin = cfg.origin._origin;
+                var origin = cfg.origin._origin
                 var text = container.addShape('Text', {
                   className: 'text',
                   attrs: {
@@ -175,7 +174,7 @@
                     textAlign: 'center',
                     fontSize: 10
                   }
-                });
+                })
                 return [circle, text];
               }
             });
@@ -187,9 +186,9 @@
 <style scoped lang="scss">
     .Intro {
       .text{
-        padding: 0 0.24rem;
+        padding: 0 10px;
         color: #595959;
-        font-size: 0.24rem;
+        font-size: 12px;
         line-height: 1.8;
         margin: 0.8rem 0;
       }

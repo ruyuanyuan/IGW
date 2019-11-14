@@ -50,7 +50,7 @@ export default {
       box-sizing: border-box;
       .mb-text{
         color:#595959;
-        font-size:14px;
+        font-size:12px;
         line-height:24px;
       }
       .mb-img{

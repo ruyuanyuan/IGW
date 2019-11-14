@@ -1,12 +1,7 @@
 <template>
   <div class='mb_platform_template'>
-    <div class='gwi-row'>
-      <div class='topnav'>
-        <img src="@/assets/img/top_nav.png" alt="">
-        <div class='topnav-title'>核心平台</div>
-      </div>
-    </div>
-     <div class='gwi-row tv-row'>
+    <Area text="IGW全球游戏生态联盟"/>
+    <div class='gwi-row tv-row'>
       <div class='gwi-row-content'>
         <div class='tv-content'>
           <div class='tv-left'>
@@ -24,7 +19,7 @@
     </div>
     <div class='gwi-row interflow-row'>
       <div class='gwi-row-content'>
-         <div class='gwi-row-h'>可扩展的泛社区化游戏平台</div>
+        <Underline text="可扩展的泛社区化游戏平台"></Underline>
         <div class='interflow-group'>
           <div class="interflow-item">
             <div class='interflow-item-img'>
@@ -86,7 +81,7 @@
     </div>
     <div class='gwi-row iphone-row'>
       <div class='gwi-row-content'>
-        <div class='gwi-row-h'>跨终端支持</div>
+        <Underline text="跨终端支持"></Underline>
         <div class='iphone-row-group'>
             <div class='iphone-row-item'>
               <div class='iphone-row-item-img'>
@@ -127,51 +122,69 @@
   </div>
 </template>
 <script>
+import Area from "../components/Area"
+import Underline from "../components/Underline"
 export default {
   name:'mb_platform',
   data(){
     return {
       
     }
+  },
+  components:{
+    Area,
+    Underline
   }
 }
 </script>
 <style lang="scss">
   .mb_platform_template{
+    width:100%;
+    .gwi-row{
+      width:100%;
+      padding:0 10px;
+      box-sizing: border-box;
+      .gwi-row-content{
+        width:100%;
+        padding:15px 0;
+      }
+    }
     .tv-row{
       background:#fff;
+      width:100%;
       .gwi-row-content{
-        padding:0;
+        padding:0 10px;
+        box-sizing: border-box;
       }
       .tv-content{
         display: flex;
         justify-content: space-between;
         .tv-left{
-          padding-top:88px;
+          padding-top:30px;
           box-sizing: border-box;
           .tv-title{
-            font-size: 24px;
+            font-size: 18px;
             color:#000;
           }
           .tv-doc{
-            margin-top:45px;
+            margin-top:20px;
             .tv-h{
-              font-size: 36px;
+              font-size: 24px;
               color:#000;
               font-weight: bold;
             }
             .tv-p{
-              font-size: 24px;
+              font-size: 16px;
               color:#000;
             }
           }
         }
         .tv-right{
-          height:350px;
+          height:180px;
           img{
-            height:350px;
+            height:180px;
             position: relative;
-            top:30px;
+            top:20px;
           }
         }
       }
@@ -179,44 +192,43 @@ export default {
     .interflow-row{
       background:#EDF1F7;
       .interflow-group{
-        width:800px;
         margin:0 auto;
         .interflow-item{
           width:100%;
-          margin-top:40px;
+          margin-top:20px;
           display: flex;
-          padding:40px;
+          padding:10px;
           box-sizing: border-box;
           background:#fff;
           justify-content: space-between;
           box-shadow:0px 3px 12px 0px rgba(163,164,166,0.2);
           .interflow-item-img{
-            width:90px;
-            margin:0 45px;
+            margin:0 10px;
             display: flex;
             align-items: center;
             img{
-              width:100%;
+              width:60px;
               display: block;
             }
           }
           .interflow-item-doc{
-            width:500px;
             .interflow-item-h{
               color:#000;
               font-weight: bold;
-              font-size:24px;
+              font-size:16px;
             }
             .interflow-item-p{
               margin-top:10px;
               color:#595959;
-              line-height: 30px;
+              line-height: 24px;
+              font-size:12px;
             }
           }
         }
       }
     }
     .iphone-row{
+      padding-bottom:20px;
       .iphone-row-group{
         display: flex;
         .iphone-row-item{
@@ -225,12 +237,13 @@ export default {
           .iphone-row-item-img{
             width:100%;
             img{
-              width:100px;
+              width:80px;
             }
           }
           .iphone-row-item-doc{
             color:#000;
             margin-top:20px;
+            font-size:12px;
           }
           .iphone-row-item-btn{
             display: inline-block;
@@ -240,7 +253,8 @@ export default {
             line-height: 30px;
             border:1px solid rgba(3,0,0,1);
             border-radius:15px;
-            margin-top:40px;
+            margin-top:20px;
+            font-size:12px;
             cursor: pointer;
             &:hover{
               background:#1862E9;

@@ -206,7 +206,7 @@
 
         .every {
           width: 8rem;
-          height: 2.4rem;
+          height: 3.4rem;
           margin-left: 0.4rem;
           position: relative;
           background: url("../../assets/mobileImage/shadow.png") no-repeat;
@@ -241,13 +241,14 @@
 
             div {
               color: #252525;
-              font-size: 0.32rem;
+              font-size: 12px;
               font-weight: bold;
             }
 
             p {
               color: #5A5A5A;
-              font-size: 0.24rem;
+              font-size: 10px;
+              line-height: 20px;
             }
           }
 

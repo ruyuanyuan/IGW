@@ -1,6 +1,8 @@
 <template>
     <div class="Header">
-      <div class="left"><img src="@/assets/img/logo.png" alt=""></div>
+      <div class="left">
+        <router-link to='/m'><img src="@/assets/img/logo.png" alt=""></router-link> 
+        </div>
       <div class="right" @click='showMenuEvent'><i class="el-icon-s-operation"></i></div>
       <Menu v-if='showMenu' @menuClickEvent='changeMenuEvent'></Menu>
     </div>
@@ -20,11 +22,10 @@ export default {
     },
     methods: {
       showMenuEvent(){
-        this.showMenu=true
+        this.showMenu=!this.showMenu
       },
       changeMenuEvent(path){
         this.showMenu=false
-        console.log(path)
         this.$router.push(path)
       }
     }
@@ -50,7 +51,7 @@ export default {
         height: 0.667rem;
         display: flex;
         img{
-          width: 100%;
+          width: 30px;
           height: auto;
         }
       }
