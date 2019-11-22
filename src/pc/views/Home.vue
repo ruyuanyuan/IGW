@@ -3,27 +3,27 @@
     <div class='home-banner' id='WebGL-output'>
       <div class='home-banner-content' >
         <div class='home-banner-h1'>INVINCIBLE GAME WORLD</div>
-        <div class='home-banner-title'>—全球游戏生态联盟—</div>
-        <div class='home-banner-doc'>全新的游戏经济生态基础设施</div>
+        <div class='home-banner-title'>—{{home.bannerH1}}—</div>
+        <div class='home-banner-doc'>{{home.bannerH2}}</div>
       </div>
     </div>
     <div class='gwi-row'>
         <div class='gwi-row-content'>
-          <div class='gwi-row-title'>IGW简介</div>
+          <div class='gwi-row-title'>{{home.introduceTitle}}</div>
           <div class='gwi-doc'>
-            IGW全球游戏生态联盟致力打造一个基于区块链原生的泛社区化游戏平台，聚合游戏玩家、游戏内容生产者、开发者、数字资产交易者等多种泛社区成员，为游戏玩家提供优质的游戏内容，为开发者提供完善的游戏开发模块、数据服务及流量支持，且无中间费用，用户可使用平台通证IGC进行游戏数字资产的自由交易和跨链流通，社区内容完全由社区成员推动而实现自治管理和规范运作。
+           {{home.introduceDoc}}
           </div>
           <div class='gwi-row-more'>
-            <router-link to='/pc/introduce'>点击了解更多</router-link>
+            <router-link to='/pc/introduce'>{{home.learnMore}}</router-link>
           </div>
         </div>
     </div>
     <div class='gwi-row analysis-row'>
         <div class='gwi-row-content'>
-          <div class='gwi-row-title font-while'>区块链行业宏观分析</div>
+          <div class='gwi-row-title font-while'>{{home.analysisTitle}}</div>
           <div class='analysis-title'>
-            <div class='analysis-p'>传统游戏市场日趋成熟的同时</div>
-            <div class='analysis-p analysis-p-blod'>也出现了诸多问题</div>
+            <div class='analysis-p'>{{home.analysish1}}</div>
+            <div class='analysis-p analysis-p-blod'>{{home.analysish2}}</div>
           </div>
           <div class='gwi-book-group'>
             <div class='gwi-book-item'>
@@ -40,36 +40,36 @@
             </div>
           </div>
           <div class='gwi-row-more btn-while'>
-            <router-link to='/pc/analysis'>点击了解更多</router-link>
+            <router-link to='/pc/analysis'>{{home.learnMore}}</router-link>
           </div>
         </div>
     </div>
     <div class='gwi-row union-row'>
         <div class='gwi-row-content'>
-          <div class='gwi-row-title'>IGW全球游戏生态联盟</div>
+          <div class='gwi-row-title'>{{home.ecologyTitle}}</div>
           <div class='gwi-doc'>
-            IGW能够为游戏生态参与者提供更丰富的服务和生态模式，通过颠覆性的商业模式和区块链技术解决目前游戏行业的真实痛点。相比于其他游戏公链，IGW的构想和设计将更容易更快实现大规模落地应用，我们将结合现有技术，对整体行业逐步进行迭代改造。
+            {{home.ecologyDoc}}
           </div>
           <div class='gwi-gw-group'>
             <div class='gwi-gw-item'>
               <img src="@/assets/img/gw1.png" alt="">
-              <span>流量共享</span>
+              <span>{{home.ecologyIcon1}}</span>
             </div>
             <div class='gwi-gw-item'>
               <img src="@/assets/img/gw2.png" alt="">
-              <span>一键全球发行</span>
+              <span>{{home.ecologyIcon2}}</span>
             </div>
             <div class='gwi-gw-item'>
               <img src="@/assets/img/gw3.png" alt="">
-              <span>去中介化</span>
+              <span>{{home.ecologyIcon3}}</span>
             </div>
             <div class='gwi-gw-item'>
               <img src="@/assets/img/gw4.png" alt="">
-              <span>资产流通</span>
+              <span>{{home.ecologyIcon4}}</span>
             </div>
           </div>
           <div class='gwi-row-more'>
-            <router-link to='/pc/ecology'>点击了解更多</router-link>
+            <router-link to='/pc/ecology'>{{home.learnMore}}</router-link>
           </div>
         </div>
     </div>
@@ -77,23 +77,23 @@
         <div class='gwi-row-content'>
           <div class='igw_left'>
             <div class='igw_h'>IGW Basics</div>
-            <div class='igw_p'>为游戏而生！</div>
+            <div class='igw_p'>{{home.gameCreate}}</div>
             <div class='igw-software-group'>
               <div class='igw-software-item'>
                 <img src="@/assets/img/icon1.png" alt="">
-                <span>社区</span>
+                <span>{{home.gameIcon1}}</span>
               </div>
               <div class='igw-software-item'>
                 <img src="@/assets/img/icon2.png" alt="">
-                <span>商店</span>
+                <span>{{home.gameIcon2}}</span>
               </div>
               <div class='igw-software-item'>
                 <img src="@/assets/img/icon3.png" alt="">
-                <span>IM/超群</span>
+                <span>{{home.gameIcon3}}</span>
               </div>
               <div class='igw-software-item'>
                 <img src="@/assets/img/icon4.png" alt="">
-                <span>钱包</span>
+                <span>{{home.gameIcon4}}</span>
               </div>
             </div>
           </div>
@@ -105,61 +105,49 @@
     <div class='gwi-row powered-row'>
         <img src="@/assets/img/bg1.png" alt="">
         <div class='gwi-row-more btn-while'>
-             <router-link to='/pc/skill'>点击了解更多</router-link>
+             <router-link to='/pc/skill'>{{home.learnMore}}</router-link>
           </div>
     </div>
     <div class='gwi-row fund-row'>
         <div class='gwi-row-content'>
-          <div class='gwi-row-title'>IGW基金会</div>
+          <div class='gwi-row-title'>{{home.fundTitle}}</div>
           <div class='fund-row-content'>
             <div class='fund-row-left'>
-              IGWF注册于英属群岛直布罗陀，是全球游戏生态联盟体系的发起者。我们致力于聚合全球各地区（大洲、国家或地区）有共同志向的游戏平台、游戏开发者、运营者打造未来游戏联盟经济体，共同创建一个为游戏行业参与者走向全球市场的渠道，通过区块链技术手段及完善的解决方案实现联盟成员的相互信任、流量共享、平等共赢。
+              {{home.fundDoc}}
             </div>
             <div class='fund-row-right'>
               <img src="@/assets/img/map.png" alt="">
             </div>
           </div>
           <div class='gwi-row-more'>
-             <router-link to='/pc/fund'>点击了解更多</router-link>
+             <router-link to='/pc/fund'>{{home.learnMore}}</router-link>
           </div>
         </div>
     </div>
      <div class='gwi-row history-row'>
-        <div class='gwi-row-title font-while'>路线图</div>
+        <div class='gwi-row-title font-while'>{{home.roadMap}}</div>
         <img src="@/assets/img/bg2.png" alt="">
     </div>
     <div class='gwi-row callme-row'>
         <div class='gwi-row-content'>
-          <div class='gwi-row-title'>联系我们</div>
+          <div class='gwi-row-title'>{{home.callMe}}</div>
           <div class='form-content'>
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" >
               <el-form-item prop="user_name" class='form-item-input input-name'>
-                <label >姓名 | NAME</label>
+                <label >{{home.name}} | NAME</label>
                 <el-input type="text" maxlength='8' v-model="ruleForm.user_name" ></el-input>
               </el-form-item>
                <el-form-item prop="user_phone" class='form-item-input input-phone'>
-                <label >电话 | PHONE</label>
+                <label >{{home.phone}} | PHONE</label>
                 <el-input type="tel" maxlength="11"  v-model="ruleForm.user_phone"></el-input>
               </el-form-item>
               <el-form-item  prop="user_message" class='form-item-textarea' >
-                <label >留言 | MESSAGE</label>
+                <label >{{home.message}} | MESSAGE</label>
                 <el-input type="textarea" maxlength="120" v-model="ruleForm.user_message" autocomplete="off"></el-input>
               </el-form-item>
             </el-form>
-            <!-- <div class='form-item-input'>
-              <label >姓名 | NAME</label>
-              <input type="text" v-model="user_name">
-            </div>
-            <div class='form-item-input'>
-              <label >电话 | PHONE</label>
-              <input type="tel" maxlength="11" class='input-phone' v-model="user_phone">
-            </div>
-            <div class='form-item-textarea'>
-              <label >留言 | MESSAGE</label>
-              <textarea rows="4" v-model="user_message"></textarea>
-            </div> -->
             <div class='form-btn-group'>
-              <div class='form-btn' @click='addMessage'>发送留言</div>
+              <div class='form-btn' @click='addMessage'>{{home.seedMessage}}</div>
             </div>
           </div>
         </div>
@@ -328,7 +316,6 @@ export default {
         user_phone:'',
         user_message:'',
       },
-     
       rules: {
         user_name: [
           { validator: validatename, trigger: 'blur' }
@@ -339,7 +326,8 @@ export default {
         user_message: [
           { validator: validatemessage, trigger: 'blur' }
         ]
-      }
+      },
+      home:this.$language.zh.home
     }
   },
   methods: {
@@ -373,7 +361,16 @@ export default {
       })
     }
   },
-
+  watch:{
+    languagetype() {
+      this.home=this.$language[this.languagetype].home
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -399,8 +396,16 @@ export default {
         }
         .home-banner-doc{
           font-size:13px;
-          letter-spacing:20px;
+          letter-spacing:2px;
           margin-top:40px;
+          width:100%;
+          text-align: justify;
+          &::after {
+              display: inline-block;
+              width: 100%;
+              content: '';
+              height: 0;
+          }
         }
       }
     }

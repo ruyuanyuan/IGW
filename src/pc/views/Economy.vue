@@ -3,7 +3,7 @@
     <div class="gwi-row">
       <div class="topnav">
         <img src="@/assets/img/top_nav.png" alt="" />
-        <div class="topnav-title">通证经济</div>
+        <div class="topnav-title">{{economy.Title}}</div>
       </div>
     </div>
     <div class="gwi-row table-row">
@@ -65,7 +65,7 @@
     <div class="gwi-row table-row  table2-row">
       <div class="gwi-row-content">
         <div class="table-content">
-          <div class='gwi-row-h'>通证互换</div>
+          <div class='gwi-row-h'>{{economy.Exchange}}</div>
           <div class="table-box">
             <table class='table' cellspacing="0">
               <thead>
@@ -109,7 +109,22 @@
 </template>
 <script>
 export default {
-  name: "cooperate"
+  name: "economy",
+  data(){
+    return {
+      economy:this.$language.zh.economy
+    }
+  },
+  watch:{
+    languagetype() {
+      this.economy=this.$language[this.languagetype].economy
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  }
 };
 </script>
 <style lang="scss">

@@ -3,12 +3,12 @@
     <div class='gwi-row'>
       <div class='topnav'>
         <img src="@/assets/img/top_nav.png" alt="">
-        <div class='topnav-title'>宏观分析</div>
+        <div class='topnav-title'>{{analysis.Title}}</div>
       </div>
     </div>
     <div class='gwi-row chart-row'>
       <div class='gwi-row-content'>
-        <div class='gwi-row-h'>市场分析</div>
+        <div class='gwi-row-h'>{{analysis.marketTitle}}</div>
         <div class='chart_box'>
           <img src="@/assets/img/ay.png" alt="">
         </div>
@@ -27,21 +27,21 @@
           </div>
         </div>
         <div class='chart_doc_item'>
-            <div class='chart_doc_title'><span class='blue_block'></span> 游戏发展简史</div>
-            <div class='chart_doc_p'>自20世纪90年代以来，随着互联网的迅速发展，全球游戏市场日益发展壮大，渐趋成熟，现已形成移动端游戏、PC端游戏、家庭游戏机游戏等多个细分市场</div>
+            <div class='chart_doc_title'><span class='blue_block'></span> {{analysis.gameHostry}}</div>
+            <div class='chart_doc_p'>{{analysis.gameHostryDoc}}</div>
           </div>
         <div class='chart_doc_item'>
-          <div class='chart_doc_title'><span class='blue_block'></span> 游戏市场前景</div>
-          <div class='chart_doc_p'>据《2019 GLOBAL GAMES MARKET》数据显示，预计到2019年末，全球游戏市场总规模可达1521亿美金，年同比增长9.6%，预计2022年末，全球游戏市场规模可达1960亿美金。全球游戏市场前景非常广阔。</div>
+          <div class='chart_doc_title'><span class='blue_block'></span> {{analysis.prospectTitle}}</div>
+          <div class='chart_doc_p'>{{analysis.prospectDoc}}</div>
         </div>
       </div>
     </div>
     <div class='gwi-row analysis-row'>
         <div class='gwi-row-content'>
-          <div class='gwi-row-h font-while'>痛点分析</div>
+          <div class='gwi-row-h font-while'>{{analysis.painTitle}}</div>
           <div class='analysis-title'>
-            <div class='analysis-p'>传统游戏市场日趋成熟的同时</div>
-            <div class='analysis-p analysis-p-blod'>也出现了诸多问题</div>
+            <div class='analysis-p'>{{analysis.painH1}}</div>
+            <div class='analysis-p analysis-p-blod'>{{analysis.painH2}}</div>
           </div>
           <div class='gwi-book-group'>
             <div class='gwi-book-item'>
@@ -61,23 +61,23 @@
     </div>
     <div class='gwi-row status-row'>
         <div class='gwi-row-content'>
-          <div class='gwi-row-h'>链游现状</div>
+          <div class='gwi-row-h'>{{analysis.chainTitle}}</div>
           <div class='status_doc'>
-            2017年11月，第一款区块链游戏加密猫（Cryptokitties）诞生，仅上线几个小时就占据了以太坊15%的网络，贡献了ETH30%的交易量，一度导致以太坊网络拥堵，受欢迎程度可见一斑。自此以后，国内外区块链游戏迅速爆发，链游市场初步形成，链游市场主要有三大类项目：
+            {{analysis.chainDoc}}：
           </div>
           <div class='status_doc'>
-            <p class='status_p'><span>A</span> 区块链游戏：如养成类、经营类、收藏类、博彩类、旁氏类、卡牌类；</p>
-            <p class='status_p'><span>B</span> 链游基础链：如游戏公链、字母链、联盟链；</p>
-            <p class='status_p'><span>C</span> 链游服务商：如链游虚拟资产交易平台、链游服化平台。</p>
+            <p class='status_p'><span>A</span> {{analysis.chainA}}</p>
+            <p class='status_p'><span>B</span> {{analysis.chainB}}</p>
+            <p class='status_p'><span>C</span> {{analysis.chainC}}</p>
           </div>
           <div class='status_doc'>
-            但从游戏的本质角度来看，以上所谓的区块链游戏不能算是真正意义的游戏，只是蹭了区块链概念的伪链游，大都无法运营与链端，仅实现了游戏内虚拟资产交易，依然无法进行跨平台交易，没有给开发者提供配套开发工具，并未降低运营、开发成本，也没有把区块链的特性赋能实际应用，真正的商用价值极低。
+            {{analysis.chainStatusDoc}}
           </div>
         </div>
     </div>
     <div class='gwi-row book-row'>
         <div class='gwi-row-content'>
-            <div class='gwi-row-h'>白皮书</div>
+            <div class='gwi-row-h'>{{analysis.book}}</div>
             <div class='book_content'>
               <div class='book_item'>
                 <div class='book_title'>在线阅读</div>
@@ -95,7 +95,22 @@
 </template>
 <script>
 export default {
-  name:'analysis'
+  name:'analysis',
+  data(){
+    return {
+      analysis:this.$language.zh.analysis
+    }
+  },
+  watch:{
+    languagetype() {
+      this.analysis=this.$language[this.languagetype].analysis
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  }
 }
 </script>
 <style lang="scss">

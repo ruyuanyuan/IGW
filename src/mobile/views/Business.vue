@@ -33,13 +33,11 @@
 <script>
 import Area from "../components/Area"
 import Underline from "../components/Underline"
-import Title from "../components/Title"
 export default {
   name:'business',
   components:{
     Area,
     Underline,
-    Title
   }
 }
 </script>

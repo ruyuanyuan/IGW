@@ -3,7 +3,7 @@
     <div class='gwi-row'>
       <div class='topnav'>
         <img src="@/assets/img/top_nav.png" alt="">
-        <div class='topnav-title'>合作机构</div>
+        <div class='topnav-title'>{{cooperate.Title}}</div>
       </div>
     </div>
     <div class='gwi-row'>
@@ -12,23 +12,23 @@
           <div class='gw-cooperate-item'>
             <img src="@/assets/img/school1.png" alt="">
             <div class='item-content'>
-              <p>清华大学数字金融资产研究院</p>
-              <p>清华大学金融发展研究中心</p>
-              <p>清华大学经管学院创业者加速器区块链应用实验室</p>
+              <p>{{cooperate.cooperateh1}}</p>
+              <p>{{cooperate.cooperateh2}}</p>
+              <p>{{cooperate.cooperateh3}}</p>
             </div>
           </div>
           <div class='gw-cooperate-item-line'></div>
           <div class='gw-cooperate-item'>
             <img src="@/assets/img/school2.png" alt="">
             <div class='item-content only-one'>
-              <p>株式会社 Global Systems</p>
+              <p>{{cooperate.cooperateh4}} Global Systems</p>
             </div>
           </div>
           <div class='gw-cooperate-item-line'></div>
           <div class='gw-cooperate-item'>
             <img src="@/assets/img/school3.png" alt="">
             <div class='item-content  only-one'>
-              <p>株式会社ROSE ONLINE</p>
+              <p>{{cooperate.cooperateh4}}ROSE ONLINE</p>
             </div>
           </div>
         </div>
@@ -38,7 +38,22 @@
 </template>
 <script>
 export default {
-  name:'cooperate'
+  name:'cooperate',
+  data(){
+    return {
+      cooperate:this.$language.zh.cooperate
+    }
+  },
+  watch:{
+    languagetype() {
+      this.cooperate=this.$language[this.languagetype].cooperate
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  }
 }
 </script>
 <style lang="scss">

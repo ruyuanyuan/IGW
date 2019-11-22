@@ -3,7 +3,7 @@
     <div class='gwi-row'>
       <div class='topnav'>
         <img src="@/assets/img/top_nav.png" alt="">
-        <div class='topnav-title'>IGW简介</div>
+        <div class='topnav-title'>{{history.Title}}</div>
       </div>
     </div>
     <div class='gwi-row history-row'>
@@ -11,7 +11,7 @@
         <div class='company-history'>
           <div class='history-line'>
             <div class='company-event' 
-              v-for='(item,index) in timeEvent' :key='index' 
+              v-for='(item,index) in history.timeEvent' :key='index' 
               :class='index % 2===0?"left-card":"right-card"'
               :style='"top:"+(index+1)*110+"px"'
               >
@@ -39,81 +39,19 @@
 export default {
   data(){
     return {
-      timeEvent:[
-        {
-          time:'2018年8月',
-          titles:[
-            '种子轮融资1000万IGW项目启动'
-          ],
-          imgurl:'satr_a'
-        },
-        {
-          time:'2018年11月',
-          titles:[
-            'IGW Basics 研发',
-            '完善商业模式'
-          ],
-          imgurl:'satr_b'
-        },
-        {
-          time:'2019年1月',
-          titles:[
-            '发布白皮书'
-          ],
-          imgurl:'satr_c'
-        },
-        {
-          time:'2019年3月',
-          titles:[
-            '开始通证互换',
-            '官方网站上线'
-          ],
-          imgurl:'satr_d'
-        },
-        {
-          time:'2019年6月',
-          titles:[
-            '通证上线交易所'
-          ],
-          imgurl:'satr_e'
-        },
-        {
-          time:'2019年9月',
-          titles:[
-            'IGW Basics 韩国区域上线'
-          ],
-          imgurl:'satr_f'
-        },
-        {
-          time:'2019年11月',
-          titles:[
-            'IGW Protocol 测试网上线'
-          ],
-          imgurl:'satr_g'
-        },
-        {
-          time:'2020年',
-          titles:[
-            'IGW全球节点上线',
-            'IGW携百款游戏进行全球发行',
-            'IGW联盟链正式上线，100家开发者加入',
-            'IGW游戏生态联盟预计收入过3000千万',
-          ],
-          imgurl:'satr_h'
-        },
-        {
-          time:'2021年',
-          titles:[
-            'IGW全球节点上线',
-            'IGW生态联盟预计帮助中国50家游戏开发者进行链改',
-            'IGW游戏生态联盟预计收入过亿元',
-          ],
-          imgurl:'satr_i'
-        },
-      ]
+      history:this.$language.zh.history
     }
   },
-
+  watch:{
+    languagetype() {
+      this.history=this.$language[this.languagetype].history
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -126,15 +64,15 @@ export default {
       .history-line{
         margin:0 auto;
         width:2px;
-        height:1000px;
+        height:1200px;
         padding-top:1px;
         padding-bottom: 120px;
         background:#BFBFBF;
         position: relative;
         
         .company-event{
-          width:380px;
-          height:90px;
+          width:450px;
+          height:110px;
           background:#fff;
           padding:8px;
           .triangle{

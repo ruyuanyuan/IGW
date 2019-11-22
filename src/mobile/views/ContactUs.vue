@@ -62,7 +62,6 @@
 <script>
 import Axios from 'axios'
 import Area from '../components/Area'
-import Raduis from '../components/Radius'
 export default {
   name: 'ContactUs',
   created() {},

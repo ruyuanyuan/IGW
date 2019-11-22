@@ -3,7 +3,7 @@
     <div class='footer_content'>
         <div class='gw-row'>
           <div class='gw-row-left'>
-            <div class='gw-row-title'>合作机构</div>
+            <div class='gw-row-title'>{{footer.cooperate}}</div>
             <div class='gw-school-group'>
               <div class='gw-school-item'>
                 <img src="@/assets/img/school1.png" alt="">
@@ -18,7 +18,7 @@
           </div>
           <div class='gw-row-right'>
             <div class='gw-row-title'>
-              投资者与财务顾问
+              {{$language[this.languagetype].footer.adviser}}
             </div>
             <div class='gw-school-group'>
               <div class='gw-school-item'>
@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class='gw-row-me'>
-          <div class='gw-row-me-title'>加入我们</div>
+          <div class='gw-row-me-title'>{{footer.joinme}}</div>
           <div class='gw-row'>
             <div class='gw-row-left'>
               <div class='gw-icon-group'>
@@ -76,30 +76,30 @@
             <div class='gw-row-right'>
               <div class='gw-write-group'>
                 <div class='gw-write-item'>
-                  <div class='gw-write-item-title'>关于</div>
+                  <div class='gw-write-item-title'>{{footer.about}}</div>
                   <div class='gw-write-item-p'>IGWF</div>
-                  <div class='gw-write-item-p'>白皮书</div>
+                  <div class='gw-write-item-p'>{{footer.book}}</div>
                 </div>
                 <div class='gw-write-item'>
-                  <div class='gw-write-item-title'>生态</div>
-                  <div class='gw-write-item-p'>生态游戏联盟</div>
-                  <div class='gw-write-item-p'>核心平台</div>
-                  <div class='gw-write-item-p'>通证经济</div>
+                  <div class='gw-write-item-title'>{{footer.ecology}}</div>
+                  <div class='gw-write-item-p'>{{footer.ecology1}}</div>
+                  <div class='gw-write-item-p'>{{footer.ecology2}}</div>
+                  <div class='gw-write-item-p'>{{footer.ecology3}}</div>
                 </div>
                 <div class='gw-write-item'>
-                  <div class='gw-write-item-title'>发展</div>
-                  <div class='gw-write-item-p'>路线图</div>
+                  <div class='gw-write-item-title'>{{footer.develop}}</div>
+                  <div class='gw-write-item-p'>{{footer.develop1}}</div>
                 </div>
                 <div class='gw-write-item'>
-                  <div class='gw-write-item-title'>动态</div>
-                  <div class='gw-write-item-p'>新闻</div>
+                  <div class='gw-write-item-title'>{{footer.dynamic}}</div>
+                  <div class='gw-write-item-p'>{{footer.dynamic1}}</div>
                 </div>
               </div>
             </div>
           </div>
           <div class='gw-row-me-footer'>
               <div class='gw-write-item'>
-                  <div class='gw-write-item-title'>生态</div>
+                  <div class='gw-write-item-title'>{{$language[this.languagetype].footer.ecology}}</div>
                   <div class='gw-write-item-p'>Invincible Game World Foundation</div>
                   <div class='gw-write-item-p'>marketing_igwgame@hotmail.com</div>
                 </div>
@@ -115,7 +115,32 @@
 export default {
   data(){
     return {
-      
+      footer:{
+        cooperate:'合作机构',
+        adviser:'投资者与财务顾问',
+        joinme:'加入我们',
+        about:'关于',
+        book:'白皮书',
+        ecology:'生态',
+        ecology1:'生态游戏联盟',
+        ecology2:'核心平台',
+        ecology3:'通证经济',
+        develop:'发展',
+        develop1:'路线图',
+        dynamic:'动态',
+        dynamic1:'新闻'
+      },
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  },
+  watch:{
+    languagetype(){
+      this.footer = this.$language[this.languagetype].footer
+      console.log(this.footer)
     }
   }
 }

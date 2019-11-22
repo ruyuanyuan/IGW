@@ -3,13 +3,13 @@
     <div class='gwi-row'>
       <div class='topnav'>
         <img src="@/assets/img/top_nav.png" alt="">
-        <div class='topnav-title'>媒体</div>
+        <div class='topnav-title'>{{media.Title}}</div>
       </div>
     </div>
     <div class='gwi-row'>
       <div class='gwi-row-content'>
         <div class='gwi-media-group'>
-          <div class='gwi-media-item' v-for='(item,index) in medialist' :key='index'>
+          <div class='gwi-media-item' v-for='(item,index) in media.medialist' :key='index'>
             <div class='media-img'>
               <img :src="item.imgUrl" alt="">
             </div>
@@ -34,48 +34,17 @@ export default {
   name:'media',
   data(){
     return {
-      medialist:[
-        {
-          imgUrl:'../img/bstar1.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        },
-        {
-          imgUrl:'../img/bstar2.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        },
-        {
-          imgUrl:'../img/bstar1.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        },
-        {
-          imgUrl:'../img/bstar2.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        },
-        {
-          imgUrl:'../img/bstar1.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        },
-        {
-          imgUrl:'../img/bstar2.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        },
-        {
-          imgUrl:'../img/bstar1.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        },
-        {
-          imgUrl:'../img/bstar1.png',
-          title:'英国项目熊市布局，IGW游戏社交平台即将发布',
-          time:'2019-10-11'
-        }
-      ]
+      media:this.$language.zh.media
+    }
+  },
+  watch:{
+    languagetype() {
+      this.media=this.$language[this.languagetype].media
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
     }
   }
 }

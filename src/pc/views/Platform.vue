@@ -3,17 +3,17 @@
     <div class='gwi-row'>
       <div class='topnav'>
         <img src="@/assets/img/top_nav.png" alt="">
-        <div class='topnav-title'>核心平台</div>
+        <div class='topnav-title'>{{platform.Title}}</div>
       </div>
     </div>
      <div class='gwi-row tv-row'>
       <div class='gwi-row-content'>
         <div class='tv-content'>
           <div class='tv-left'>
-            <div class='tv-title'>即将上线</div>
+            <div class='tv-title'>{{platform.goOnline}}</div>
             <div class='tv-doc'>
               <div class='tv-h'>IGW Basics</div>
-              <div class='tv-p'>为游戏而生！</div>
+              <div class='tv-p'>{{platform.gameCreate}}</div>
             </div>
           </div>
           <div class='tv-right'>
@@ -24,16 +24,16 @@
     </div>
     <div class='gwi-row interflow-row'>
       <div class='gwi-row-content'>
-         <div class='gwi-row-h'>可扩展的泛社区化游戏平台</div>
+         <div class='gwi-row-h'>{{platform.platformTitle}}</div>
         <div class='interflow-group'>
           <div class="interflow-item">
             <div class='interflow-item-img'>
               <img src="@/assets/img/icon1.png" alt="">
             </div>
             <div class='interflow-item-doc'>
-              <div class="interflow-item-h">自由社区</div>
+              <div class="interflow-item-h">{{platform.platform1Title}}</div>
               <div class='interflow-item-p'>
-                游戏玩家不再受限于中心化游戏平台的监管和控制，拥有绝对的自由发言权，玩家可以发表对游戏的游戏心得、攻略、手绘图、实况视频等各种类型内容。同时，玩家也将成为自己数据的绝对拥有者，可以通过数据授权获得相应激励。
+                {{platform.platform1Doc}}
               </div>
             </div>
           </div>
@@ -42,9 +42,9 @@
               <img src="@/assets/img/icon2.png" alt="">
             </div>
             <div class='interflow-item-doc'>
-              <div class="interflow-item-h">游戏商店</div>
+              <div class="interflow-item-h">{{platform.platform2Title}}</div>
               <div class='interflow-item-p'>
-                依托平台搭建的全球游戏价值网，玩家可以在游戏商店获取全球各种类型的最新游戏，通过通证实现跨维度的游戏购买，杜绝虚假流量，打造真实游戏社区，让游戏玩家推荐的精品游戏真实的进入大众视野。
+                {{platform.platform2Doc}}
               </div>
             </div>
           </div>
@@ -53,9 +53,9 @@
               <img src="@/assets/img/icon4.png" alt="">
             </div>
             <div class='interflow-item-doc'>
-              <div class="interflow-item-h">钱包</div>
+              <div class="interflow-item-h">{{platform.platform3Title}}</div>
               <div class='interflow-item-p'>
-                IGW Wallet是一个多功能钱包，集成在IGW Basics平台中。它可以存储不同类型的加密货币以及IGC-WHAS-1221协议的游戏资产。就像其他加密钱包一样，用户可以轻松的发送和接收加密数字货币和游戏资产。
+               {{platform.platform3Doc}}
               </div>
             </div>
           </div>
@@ -64,9 +64,9 @@
               <img src="@/assets/img/icon13.png" alt="">
             </div>
             <div class='interflow-item-doc'>
-              <div class="interflow-item-h">兴趣社交</div>
+              <div class="interflow-item-h">{{platform.platform4Title}}</div>
               <div class='interflow-item-p'>
-                玩家可以在IGW的游戏世界中找寻志同道合的朋友或组织，宣泄自己对游戏的真实情感，交流游戏心得，组织游戏活动，共同建设更加健全、健康、纯净的游戏世界。
+                {{platform.platform4Doc}}
               </div>
             </div>
           </div>
@@ -75,9 +75,9 @@
               <img src="@/assets/img/icon3.png" alt="">
             </div>
             <div class='interflow-item-doc'>
-              <div class="interflow-item-h">社群激励</div>
+              <div class="interflow-item-h">{{platform.platform5Title}}</div>
               <div class='interflow-item-p'>
-                生态参与者可以通过社区共建行为获取相应价值，玩家可以在核心平台通过贡献有价值的内容获取价值。同时，还可以通过通证兑换游戏内容和流通游戏资产，游戏开发者通过平台获取创作收益及更多的流量、社群力量及生态支持
+                {{platform.platform5Doc}}
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@
     </div>
     <div class='gwi-row iphone-row'>
       <div class='gwi-row-content'>
-        <div class='gwi-row-h'>跨终端支持</div>
+        <div class='gwi-row-h'>{{platform.phonePad}}</div>
         <div class='iphone-row-group'>
             <div class='iphone-row-item'>
               <div class='iphone-row-item-img'>
@@ -96,7 +96,7 @@
                 pc
               </div>
               <div class='iphone-row-item-btn'>
-                即将到来
+                {{platform.comeGo}}
               </div>
             </div>
             <div class='iphone-row-item'>
@@ -107,7 +107,7 @@
                 IOS
               </div>
               <div class='iphone-row-item-btn'>
-                即将到来
+                {{platform.comeGo}}
               </div>
             </div>
             <div class='iphone-row-item'>
@@ -118,7 +118,7 @@
                 Android
               </div>
               <div class='iphone-row-item-btn'>
-                即将到来
+                {{platform.comeGo}}
               </div>
             </div>
         </div>
@@ -129,11 +129,21 @@
 <script>
 export default {
   name:'platform',
-  data(){
-    return {
-      
+   data(){
+      return {
+        platform:this.$language.zh.platform
+      }
+    },
+    watch:{
+      languagetype() {
+        this.platform=this.$language[this.languagetype].platform
+      }
+    },
+    computed: {
+      languagetype: function() {
+        return this.$store.state.language;
+      }
     }
-  }
 }
 </script>
 <style lang="scss">
@@ -219,6 +229,7 @@ export default {
     .iphone-row{
       .iphone-row-group{
         display: flex;
+        margin-top:40px;
         .iphone-row-item{
           width:33.33%;
           text-align: center;
@@ -235,7 +246,7 @@ export default {
           .iphone-row-item-btn{
             display: inline-block;
             text-align: center;
-            width:95px;
+            width:110px;
             height:30px;
             line-height: 30px;
             border:1px solid rgba(3,0,0,1);
