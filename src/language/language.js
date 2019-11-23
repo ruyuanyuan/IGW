@@ -124,6 +124,8 @@ export default {
       gamePlay2Doc:'游戏玩家的个人数据信息将通过区块链技术进行保护，保障游戏玩家的数据安全，保护游戏玩家的个人隐私。同时，玩家可以授权游戏开发者使用玩家个人数据为社区生态做贡献，并为此获得相应社区奖励。',
       gamePlay3:'价值传递',
       gamePlay3Doc:'通过区块链和智能合约技术保障玩家游戏资产的唯一性，玩家游戏资产可以通过IGW平台进行买卖，减少支付欺诈，为玩家提供绿色安全可靠的平台，使游戏资产得到价值传递。',
+      gamePlay4:'知识转化',
+      gamePlay4Doc:'玩家通过IGW Basics 进行游戏社区共建，建立去中心化自由交互社区。IGW根据玩家贡献度发放奖励，使玩家投入的时间、热情、知识得到价值转化，形成自治理良性正循环。',
 
     },
     platform:{
@@ -301,7 +303,16 @@ export default {
       cooperateh4:'株式会社'
     },
     contact:{
-
+      Title:'联系我们',
+      email:'邮箱',
+      phone:'电话',
+      address:'地址',
+      addressPostion:'北京市朝阳区',
+      joinUs:'加入IGW，开启全球游戏生态联盟计划',
+      name:'姓名',
+      phone:'电话',
+      message:'留言',
+      seedMessage:'发送留言'
     }
   },
   en:{
@@ -604,6 +615,18 @@ export default {
       cooperateh3:'Tsinghua University blockchain Application Laboratory',
       cooperateh4:'KK'
     },
+    contact:{
+      Title:'Contact Us',
+      email:'Email',
+      phone:'Phone',
+      address:'Address',
+      addressPostion:'Chaoyang District of Beijing City',
+      joinUs:'Join IGW and launch the global game ecosystem Alliance Program',
+      name:'Name',
+      phone:'Phone',
+      message:'Message',
+      seedMessage:'Send Message'
+    }
   },
   rn:{
     header:{
@@ -905,6 +928,18 @@ export default {
       cooperateh3:'清華大学経管学院創業者加速器ブロックチェーン応用実験室',
       cooperateh4:'株式会社'
     },
+    contact:{
+      Title:'連絡します',
+      email:'メールボックス',
+      phone:'電話',
+      address:'地址',
+      addressPostion:'北京市朝陽区',
+      joinUs:'IGWに加入して、全世界のゲームの生態連盟の計画をオープンします。',
+      name:'名前',
+      phone:'電話',
+      message:'伝言',
+      seedMessage:'送伝言'
+    }
   },
   hn:{
     header:{
@@ -1207,5 +1242,17 @@ export default {
       cooperateh3:'청화대학 경영대학 창업자 가속기 구별 체인 응용 실험실',
       cooperateh4:'주식회사'
     },
+    contact:{
+      Title:'연락 주세요.',
+      email:'메일박스',
+      phone:'전화기',
+      address:'주소',
+      addressPostion:'조선시',
+      joinUs:'IGW 에 가입하여 글로벌 게임 생태연맹 계획을 개설하다',
+      name:'이름',
+      phone:'전화기',
+      message:'메모',
+      seedMessage:'메시지를보내다'
+    }
   }
 }

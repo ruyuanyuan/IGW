@@ -1,50 +1,14 @@
 <template>
   <div class='media_template'>
-    <Area text="媒体"/>
+    <Area :text="media.Title"/>
     <div class='mb-row'>
-      <div class='mb-item'>
+      <div class='mb-item' v-for="(item,index) in media.medialist" :key='index'>
         <img src="@/assets/mbImg/bstar1.png" alt="">
         <div class='mb-item-doc'>
-          <p>英国项目熊市布局，IGW游戏社交平台即将发布</p>
+          <p>{{item.title}}</p>
         </div>
-        <div class='mb-item-time'>2019-10-11</div>
+        <div class='mb-item-time'>{{item.time}}</div>
       </div>
-       <div class='mb-item'>
-        <img src="@/assets/mbImg/bstar1.png" alt="">
-        <div class='mb-item-doc'>
-          <p>英国项目熊市布局，IGW游戏社交平台即将发布</p>
-        </div>
-        <div class='mb-item-time'>2019-10-11</div>
-      </div>
-       <div class='mb-item'>
-        <img src="@/assets/mbImg/bstar1.png" alt="">
-        <div class='mb-item-doc'>
-          <p>英国项目熊市布局，IGW游戏社交平台即将发布</p>
-        </div>
-        <div class='mb-item-time'>2019-10-11</div>
-      </div>
-       <div class='mb-item'>
-        <img src="@/assets/mbImg/bstar1.png" alt="">
-        <div class='mb-item-doc'>
-          <p>英国项目熊市布局，IGW游戏社交平台即将发布</p>
-        </div>
-        <div class='mb-item-time'>2019-10-11</div>
-      </div>
-       <div class='mb-item'>
-        <img src="@/assets/mbImg/bstar1.png" alt="">
-        <div class='mb-item-doc'>
-          <p>英国项目熊市布局，IGW游戏社交平台即将发布</p>
-        </div>
-        <div class='mb-item-time'>2019-10-11</div>
-      </div>
-       <div class='mb-item'>
-        <img src="@/assets/mbImg/bstar1.png" alt="">
-        <div class='mb-item-doc'>
-          <p>英国项目熊市布局，IGW游戏社交平台即将发布</p>
-        </div>
-        <div class='mb-item-time'>2019-10-11</div>
-      </div>
-      
     </div>
   </div>
 </template>
@@ -54,7 +18,22 @@ export default {
   name:'mb_media',
   components:{
     Area,
-  }
+  },
+  data(){
+      return {
+        media:this.$language[this.$store.state.language].media
+    }
+  },
+  watch:{
+    languagetype() {
+      this.media=this.$language[this.languagetype].media
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  },
 }
 </script>
 <style lang="scss">

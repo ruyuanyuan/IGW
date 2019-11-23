@@ -98,7 +98,7 @@ export default {
   name:'analysis',
   data(){
     return {
-      analysis:this.$language.zh.analysis
+      analysis:this.$language[this.$store.state.language].analysis
     }
   },
   watch:{

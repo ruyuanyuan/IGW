@@ -1,27 +1,50 @@
 <template>
     <div class="Menu">
-      <div @click='selectedMenu("/m/intro")'>IGW简介</div>
-      <div @click='selectedMenu("/m/macroAnalysis")'>宏观分析</div>
-      <div @click='selectedMenu("/m/business")'>IGW商业模式</div>
-      <div @click='selectedMenu("/m/ecology")'>全球游戏生态联盟</div>
-      <div @click='selectedMenu("/m/platform")'>IGW Basics</div>
-      <div @click='selectedMenu("/m/technology")'>技术优势</div>
-      <div @click='selectedMenu("/m/foundation")'>基金会</div>
-      <div @click='selectedMenu("/m/economy")'>通证经济</div>
-      <div @click='selectedMenu("/m/development")'>发展路线</div>
-      <div @click='selectedMenu("/m/media")'>媒体</div>
-      <div @click='selectedMenu("/m/team")'>合作机构</div>
-      <div @click='selectedMenu("/m/contact")'>联系我们</div>
+      <div @click='selectedMenu("/m/intro")'>{{menus.introduce}}</div>
+      <div @click='selectedMenu("/m/macroAnalysis")'>{{menus.analysis}}</div>
+      <div @click='selectedMenu("/m/business")'>{{menus.business}}</div>
+      <div @click='selectedMenu("/m/ecology")'>{{menus.ecology}}</div>
+      <div @click='selectedMenu("/m/platform")'>{{menus.platform}}</div>
+      <div @click='selectedMenu("/m/technology")'>{{menus.skill}}</div>
+      <div @click='selectedMenu("/m/foundation")'>{{menus.fund}}</div>
+      <div @click='selectedMenu("/m/economy")'>{{menus.economy}}</div>
+      <div @click='selectedMenu("/m/development")'>{{menus.history}}</div>
+      <div @click='selectedMenu("/m/media")'>{{menus.media}}</div>
+      <div @click='selectedMenu("/m/team")'>{{menus.cooperate}}</div>
+      <div @click='selectedMenu("/m/contact")'>{{menus.contact}}</div>
+      <div class="language">
+        <span @click='changeLanguage("zh")'>中文</span>
+        <span @click='changeLanguage("en")'>English</span>
+        <span @click='changeLanguage("rn")'>日本語</span>
+        <span @click='changeLanguage("hn")'>한국어</span>
+      </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Menu",
-        components: {},
+        name: "menus",
+        data(){
+          return {
+            menus:this.$language[this.$store.state.language].header
+          }
+        },
+        watch:{
+          languagetype() {
+            this.menus=this.$language[this.languagetype].header
+          }
+        },
+        computed: {
+          languagetype: function() {
+            return this.$store.state.language;
+          }
+        },
         methods: {
           selectedMenu(path){
             this.$emit('menuClickEvent',path)
+          },
+          changeLanguage(language) {
+            this.$store.commit("languageChuang", { language: language });
           }
         }
     }

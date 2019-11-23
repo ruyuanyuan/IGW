@@ -1,15 +1,15 @@
 <template>
   <div class="Development">
-    <Area text="发展路线"/>
+    <Area :text="history.Title"/>
     <div class="developmentLine">
       <div class="content">
         <div class="every current">
           <div class="left">
             <div>
-              2018年8月
+              {{history.timeEvent[0].time}}
             </div>
             <p>
-              种子轮融资1000万IGW项目启动
+              {{history.timeEvent[0].titles[0]}}
             </p>
           </div>
           <div class="right">
@@ -20,12 +20,12 @@
           <div class="left">
             <div>
 
-              2018年11月
+              {{history.timeEvent[1].time}}
 
             </div>
             <p>
 
-              IGW Basics 研发完善商业模式
+             {{history.timeEvent[1].titles[0]}}
 
             </p>
           </div>
@@ -37,12 +37,12 @@
           <div class="left">
             <div>
 
-              2019年1月
+              {{history.timeEvent[2].time}}
 
             </div>
             <p>
 
-              发布白皮书
+               {{history.timeEvent[2].titles[0]}}
 
             </p>
           </div>
@@ -54,12 +54,12 @@
           <div class="left">
             <div>
 
-              2019年3月
+             {{history.timeEvent[3].time}}
 
             </div>
             <p>
 
-              开始通证互换官方网站上线
+               {{history.timeEvent[3].titles[0]}}
 
             </p>
           </div>
@@ -71,11 +71,12 @@
           <div class="left">
             <div>
 
-              2019年6月
+              {{history.timeEvent[4].time}}
 
             </div>
             <p>
-              通证上线交易所
+              {{history.timeEvent[4].titles[0]}}
+
             </p>
           </div>
           <div class="right">
@@ -86,12 +87,13 @@
           <div class="left">
             <div>
 
-              2019年9月
+              {{history.timeEvent[5].time}}
 
             </div>
             <p>
 
-              IGW Basics 韩国区域上线
+              {{history.timeEvent[5].titles[0]}}
+
 
             </p>
           </div>
@@ -103,12 +105,13 @@
           <div class="left">
             <div>
 
-              2019年11月
+              {{history.timeEvent[6].time}}
 
             </div>
             <p>
 
-              IGW Protocol 测试网上线
+              {{history.timeEvent[6].titles[0]}}
+
             </p>
           </div>
           <div class="right">
@@ -119,20 +122,22 @@
           <div class="left">
             <div>
 
-              2020
+              {{history.timeEvent[7].time}}
 
             </div>
             <p>
-              IGW全球节点上线
+              {{history.timeEvent[7].titles[0]}}
+
             </p>
             <p>
-              IGW携百款游戏进行全球发行
+              {{history.timeEvent[7].titles[1]}}
+
             </p>
             <p>
-              IGW联盟链正式上线，100家开发者加入
+              {{history.timeEvent[7].titles[2]}}
             </p>
             <p>
-              IGW游戏生态联盟预计收入过3000千万
+             {{history.timeEvent[7].titles[3]}}
             </p>
           </div>
           <div class="right">
@@ -142,30 +147,14 @@
         <div class="every">
           <div class="left">
             <div>
-              2021
+              {{history.timeEvent[8].time}}
             </div>
             <p>
-              IGW全球节点上线
+               {{history.timeEvent[8].titles[0]}}
             </p>
-            <p> IGW生态联盟预计帮助中国50家</p>
-            <p> 游戏开发者进行链改</p>
-            <p> IGW游戏生态联盟预计收入过亿元</p>
-          </div>
-          <div class="right">
-            <img src="@/assets/img/star9.png" alt="">
-          </div>
-        </div>
-        <div class="every">
-          <div class="left">
-            <div>
-              2022
-            </div>
-            <p>
-              IGW全球游戏公链上线，
-            </p>
-            <p> 全球预计有300+以上的游戏开发者加入</p>
-            <p>
-              IGW游戏生态联盟预计收入过上十亿</p>
+            <p>  {{history.timeEvent[8].titles[1]}}</p>
+            <p>  {{history.timeEvent[8].titles[2]}}</p>
+            <p>  {{history.timeEvent[8].titles[3]}}</p>
           </div>
           <div class="right">
             <img src="@/assets/img/star9.png" alt="">
@@ -181,16 +170,27 @@
 
   export default {
     name: "Development",
-    created() {
-
+    data(){
+      return {
+          history:this.$language[this.$store.state.language].history
+      }
     },
-    mounted() {
-
+    mounted(){
+      console.log(this.history.timeEvent[0].time)
+    },
+    watch:{
+      languagetype() {
+        this.history=this.$language[this.languagetype].history
+      }
+    },
+    computed: {
+      languagetype: function() {
+        return this.$store.state.language;
+      }
     },
     components: {
       Area
     },
-    methods: {}
   }
 </script>
 

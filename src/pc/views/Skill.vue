@@ -44,7 +44,7 @@ export default {
   name:'skill',
   data(){
     return {
-      skill:this.$language.zh.skill
+      skill:this.$language[this.$store.state.language].skill
     }
   },
   watch:{

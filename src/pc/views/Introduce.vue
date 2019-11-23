@@ -26,7 +26,7 @@
 export default {
   data(){
     return {
-      introduce:this.$language.zh.introduce
+      introduce:this.$language[this.$store.state.language].introduce
     }
   },
   watch:{

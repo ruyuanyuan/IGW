@@ -41,7 +41,7 @@ export default {
   name:'cooperate',
   data(){
     return {
-      cooperate:this.$language.zh.cooperate
+      cooperate:this.$language[this.$store.state.language].cooperate
     }
   },
   watch:{

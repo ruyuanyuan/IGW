@@ -1,11 +1,11 @@
 <template>
   <div class='mb_economy_template'>
-    <Area text="通证经济"/>
+    <Area :text="economy.Title"/>
     <div class='top-row'>
       <img src="@/assets/mbImg/e1.png" alt="">
     </div>
     <div class='mb-row model-row'>
-      <Underline text="通证互换"></Underline>
+      <Underline :text="economy.Exchange"></Underline>
       <div class='mb-img'>
         <img src="@/assets/mbImg/e2.png" alt="">
       </div>
@@ -20,6 +20,21 @@ export default {
   components:{
     Area,
     Underline,
+  },
+  data(){
+    return {
+        economy:this.$language[this.$store.state.language].economy
+    }
+  },
+  watch:{
+    languagetype() {
+      this.economy=this.$language[this.languagetype].economy
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
   }
 }
 </script>

@@ -133,7 +133,7 @@ export default {
   name:'fund',
   data(){
     return {
-      fund:this.$language.zh.fund
+      fund:this.$language[this.$store.state.language].fund
     }
   },
   watch:{

@@ -1,12 +1,12 @@
 <template>
     <div class="Footer">
-        <div class="title">合作机构</div>
+        <div class="title">{{footer.cooperate}}</div>
         <div class="img-box">
           <img src="@/assets/img/school1.png" alt="">
           <img src="@/assets/img/school2.png" alt="">
           <img src="@/assets/img/school3.png" alt="">
         </div>
-        <div class="title">投资者与财务顾问</div>
+        <div class="title">{{footer.adviser}}</div>
         <div class="img-box">
           <img src="@/assets/img/school4.png" alt="">
           <img src="@/assets/img/school7.png" alt="">
@@ -16,7 +16,7 @@
           <img src="@/assets/img/school5.png" alt="">
         </div>
         <div class="join-us">
-          <div class="title">加入我们</div>
+          <div class="title">{{footer.joinme}}</div>
           <div class="box">
             <img src="@/assets/img/icon5.png" alt="">
             <img src="@/assets/img/icon6.png" alt="">
@@ -30,35 +30,35 @@
         </div>
         <div class="des">
           <div class="box">
-            <div class="word">关于</div>
+            <div class="word">{{footer.about}}</div>
             <div>IGWF</div>
-            <div>白皮书</div>
+            <div>{{footer.book}}</div>
           </div>
           <div class="box">
-            <div class="word">生态</div>
-            <div>生态游戏联盟</div>
-            <div>核心平台</div>
-            <div>通证经济</div>
-          </div>
-          <div class="box">
-            <div class="word">
-              发展
-            </div>
-            <div>
-              路线图
-            </div>
+            <div class="word">{{footer.ecology}}</div>
+            <div>{{footer.ecology1}}</div>
+            <div>{{footer.ecology2}}</div>
+            <div>{{footer.ecology3}}</div>
           </div>
           <div class="box">
             <div class="word">
-              动态
+              {{footer.develop}}
             </div>
             <div>
-              新闻
+              {{footer.develop1}}
+            </div>
+          </div>
+          <div class="box">
+            <div class="word">
+              {{footer.dynamic}}
+            </div>
+            <div>
+              {{footer.dynamic1}}
             </div>
           </div>
         </div>
         <div class="tag">
-          <div>生态</div>
+          <div>{{footer.ecology}}</div>
           <div>Invincible Game World Foundation</div>
           <div>marketing_igwgame@hotmail.com</div>
         </div>
@@ -71,14 +71,21 @@
 <script>
     export default {
         name: "Footer",
-        created() {
-
+        data(){
+          return {
+            footer:this.$language[this.$store.state.language].footer
+          }
         },
-        mounted() {
-
+        watch:{
+          languagetype() {
+            this.footer=this.$language[this.languagetype].footer
+          }
         },
-        compontents: {},
-        methods: {}
+        computed: {
+          languagetype: function() {
+            return this.$store.state.language;
+          }
+        }
     }
 </script>
 

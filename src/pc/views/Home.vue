@@ -327,7 +327,7 @@ export default {
           { validator: validatemessage, trigger: 'blur' }
         ]
       },
-      home:this.$language.zh.home
+      home:this.$language[this.$store.state.language].home
     }
   },
   methods: {

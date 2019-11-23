@@ -131,7 +131,7 @@ export default {
   name:'platform',
    data(){
       return {
-        platform:this.$language.zh.platform
+        platform:this.$language[this.$store.state.language].platform
       }
     },
     watch:{

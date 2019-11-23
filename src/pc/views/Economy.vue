@@ -112,7 +112,7 @@ export default {
   name: "economy",
   data(){
     return {
-      economy:this.$language.zh.economy
+      economy:this.$language[this.$store.state.language].economy
     }
   },
   watch:{

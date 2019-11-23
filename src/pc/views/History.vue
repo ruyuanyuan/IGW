@@ -39,7 +39,7 @@
 export default {
   data(){
     return {
-      history:this.$language.zh.history
+      history:this.$language[this.$store.state.language].history
     }
   },
   watch:{

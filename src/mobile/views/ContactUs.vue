@@ -1,20 +1,20 @@
 <template>
   <div class="ContactUs">
-    <Area text="联系我们" />
+    <Area :text="contact.Title" />
     <div class="box">
-      <p>联系我们</p>
+      <p>{{contact.Title}}</p>
       <p>Contact us</p>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
         <el-form-item prop="user_name" class="form-item-input input-name">
-          <label>姓名 | NAME</label>
+          <label>{{contact.name}} | NAME</label>
           <el-input type="text" maxlength="8" v-model="ruleForm.user_name"></el-input>
         </el-form-item>
         <el-form-item prop="user_phone" class="form-item-input input-phone">
-          <label>电话 | PHONE</label>
+          <label>{{contact.phone}} | PHONE</label>
           <el-input type="tel" maxlength="11" v-model="ruleForm.user_phone"></el-input>
         </el-form-item>
         <el-form-item prop="user_message" class="form-item-textarea">
-          <label>留言 | MESSAGE</label>
+          <label>{{contact.message}} | MESSAGE</label>
           <el-input
             type="textarea"
             maxlength="120"
@@ -24,12 +24,12 @@
         </el-form-item>
       </el-form>
     </div>
-   <div class="gwi-row-more" @click='addMessage'>发送留言</div>
+   <div class="gwi-row-more" @click='addMessage'>{{contact.seedMessage}}</div>
     <div class="map">
       <div class="left">
         <div>
           <p>
-            邮箱 | E-mail
+            {{contact.email}} | E-mail
           </p>
           <p>
             marketing_igwgame@hotmail.com
@@ -37,7 +37,7 @@
         </div>
         <div>
           <p>
-            电话 | phone
+            {{contact.phone}} | phone
           </p>
           <p>
             +010-68686868
@@ -45,10 +45,10 @@
         </div>
         <div>
           <p>
-            地址 | address
+            {{contact.address}} | address
           </p>
           <p>
-            北京市朝阳区
+            {{contact.addressPostion}}
           </p>
         </div>
       </div>
@@ -102,7 +102,8 @@ export default {
         user_name: [{ validator: validatename, trigger: 'blur' }],
         user_phone: [{ validator: validatephone, trigger: 'blur' }],
         user_message: [{ validator: validatemessage, trigger: 'blur' }]
-      }
+      },
+      contact:this.$language[this.$store.state.language].contact
     }
   },
   components: {
@@ -137,7 +138,17 @@ export default {
         }
       })
     }
-  }
+  },
+  watch:{
+    languagetype() {
+      this.contact=this.$language[this.languagetype].contact
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  },
 }
 </script>
 <style lang="scss">

@@ -34,7 +34,7 @@ export default {
   name:'media',
   data(){
     return {
-      media:this.$language.zh.media
+      media:this.$language[this.$store.state.language].media
     }
   },
   watch:{

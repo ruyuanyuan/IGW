@@ -3,7 +3,7 @@
     <div class="gwi-row">
       <div class="topnav">
         <img src="@/assets/img/top_nav.png" alt="" />
-        <div class="topnav-title">联系我们</div>
+        <div class="topnav-title">{{contact.Title}}</div>
       </div>
     </div>
     <div class="gwi-row">
@@ -11,16 +11,16 @@
         <div class="contact_content">
           <div class="contact_left">
             <div class="contact_type">
-              <p>邮箱 | E-mail</p>
+              <p>{{contact.email}} | E-mail</p>
               <p>marketing_igwgame@hotmail.com</p>
             </div>
             <div class="contact_type">
-              <p>电话 | phone</p>
+              <p>{{contact.phone}} | phone</p>
               <p>+010-68686868</p>
             </div>
             <div class="contact_type">
-              <p>地址 | address</p>
-              <p>北京市朝阳区</p>
+              <p>{{contact.address}} | address</p>
+              <p>{{contact.addressPostion}}</p>
             </div>
             <div class="contact_map">
               <img src="@/assets/img/postion.png" alt="" />
@@ -28,24 +28,24 @@
           </div>
           <div class="contact_right">
             <div class='contact_title'>
-              <p class='contact_h'>联系我们</p>
+              <p class='contact_h'>{{contact.Title}}</p>
               <p class='contact_p'>Contact us</p>
             </div>
              <div class='contact_doc'>
-              加入IGW，开启全球游戏生态联盟计划
+              {{contact.joinUs}}
             </div>
             <div class="form-content">
               <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
                 <el-form-item prop="user_name" class="form-item-input input-name">
-                  <label>姓名 | NAME</label>
+                  <label>{{contact.name}} | NAME</label>
                   <el-input type="text" maxlength="8" v-model="ruleForm.user_name"></el-input>
                 </el-form-item>
                 <el-form-item prop="user_phone" class="form-item-input input-phone">
-                  <label>电话 | PHONE</label>
+                  <label>{{contact.phone}} | PHONE</label>
                   <el-input type="tel" maxlength="11" v-model="ruleForm.user_phone"></el-input>
                 </el-form-item>
                 <el-form-item prop="user_message" class="form-item-textarea">
-                  <label>留言 | MESSAGE</label>
+                  <label>{{contact.message}} | MESSAGE</label>
                   <el-input
                     type="textarea"
                     maxlength="120"
@@ -55,7 +55,7 @@
                 </el-form-item>
               </el-form>
               <div class="form-btn-group">
-                <div class="form-btn" @click="addMessage">发送留言</div>
+                <div class="form-btn" @click="addMessage">{{contact.seedMessage}}</div>
               </div>
             </div>
           </div>
@@ -112,7 +112,8 @@ export default {
         user_message: [
           { validator: validatemessage, trigger: 'blur' }
         ]
-      }
+      },
+      contact:this.$language[this.$store.state.language].contact
     }
   },
   methods: {
@@ -146,6 +147,16 @@ export default {
       })
     }
   },
+  watch:{
+    languagetype() {
+      this.contact=this.$language[this.languagetype].contact
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
+    }
+  }
 };
 </script>
 <style lang="scss">

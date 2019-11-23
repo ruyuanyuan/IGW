@@ -158,7 +158,7 @@ export default {
   name: "ecology",
   data(){
     return {
-      ecology:this.$language.zh.ecology
+      ecology:this.$language[this.$store.state.language].ecology
     }
   },
   watch:{

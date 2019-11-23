@@ -50,7 +50,7 @@ export default {
   name:'business',
   data(){
     return {
-      business:this.$language.zh.business
+      business:this.$language[this.$store.state.language].business
     }
   },
   watch:{

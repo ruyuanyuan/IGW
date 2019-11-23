@@ -1,8 +1,8 @@
 <template>
     <div class="MacroAnalysis">
-      <Area text="区块链行业宏观分析"/>
+      <Area :text="analysis.Title"/>
       <div class="market">
-        <Underline text="市场分析"></Underline>
+        <Underline :text="analysis.marketTitle"></Underline>
         <div class="graph">
           <img src="@/assets/mobileImage/analysis_03.png" alt="">
         </div>
@@ -58,29 +58,29 @@
         <div class="word">
           <div class="name">
             <div class="blue-square"></div>
-            游戏发展简史
+           {{ analysis.gameHostry}}
           </div>
           <div class="desc">
-            自20世纪90年代以来，随着互联网的迅速发展，全球游戏市场日益发展壮大，渐趋成熟，现已形成移动端游戏、PC端游戏、家庭游戏机游戏等多个细分市场。
+             {{ analysis.gameHostryDoc}}
           </div>
         </div>
         <div class="word">
           <div class="name">
             <div class="blue-square"></div>
-            游戏市场前景
+             {{ analysis.prospectTitle}}
           </div>
           <div class="desc">
-            据《2019 GLOBAL GAMES MARKET》数据显示，预计到2019年末，全球游戏市场总规模可达1521亿美金，年同比增长9.6%，预计2022年末，全球游戏市场规模可达1960亿美金,全球游戏市场前景非常广阔。
+             {{ analysis.prospectDoc}}
           </div>
         </div>
       </div>
       <div class="blockchain">
-        <Underline text="痛点分析" color="#fff"></Underline>
+        <Underline :text="analysis.painTitle" color="#fff"></Underline>
         <p class="text1">
-          传统游戏市场日趋成熟的同时
+           {{ analysis.painH1}}
         </p>
         <p class="text2">
-          也出现了诸多问题
+           {{ analysis.painH2}}
         </p>
         <div class="four">
           <img src="@/assets/mobileImage/blockchain_05.jpg" alt="">
@@ -91,31 +91,31 @@
       </div>
       <!--链游现状-->
       <div class="status">
-        <Underline text="链游现状"></Underline>
+        <Underline :text="analysis.marketTitle"></Underline>
         <div>
-          2017年11月，第一款区块链游戏加密猫（Cryptokitties）诞生，仅上线几个小时就占据了以太坊15%的网络，贡献了ETH30%的交易量，一度导致以太坊网络拥堵，受欢迎程度可见一斑。自此以后，国内外区块链游戏迅速爆发，链游市场初步形成，链游市场主要有三大类项目：
+           {{ analysis.chainDoc}}
         </div>
         <div>
           <div>
             <span>A</span>
-            区块链游戏：如养成类、经营类、收藏类、博彩类、旁氏类、卡牌类；
+             {{ analysis.chainA}}
           </div>
           <div>
             <span>B</span>
-            链游基础链：如游戏公链、字母链、联盟链；
+            {{ analysis.chainB}}
           </div>
           <div>
             <span>C</span>
-            链游服务商：如链游虚拟资产交易平台、链游服化平台。
+            {{ analysis.chainC}}
           </div>
         </div>
         <div>
-          但从游戏的本质角度来看，以上所谓的区块链游戏不能算是真正意义的游戏，只是蹭了区块链概念的伪链游，大都无法运营与链端，仅实现了游戏内虚拟资产交易，依然无法进行跨平台交易，没有给开发者提供配套开发工具，并未降低运营、开发成本，也没有把区块链的特性赋能实际应用，真正的商用价值极低。
+           {{ analysis.chainStatusDoc}}
         </div>
       </div>
       <!--白皮书-->
       <div class="whitePaper">
-        <Underline text="白皮书"></Underline>
+        <Underline :text="analysis.book"></Underline>
         <div class="btn">
           <div>
             <p>在线阅读</p>
@@ -139,17 +139,26 @@
     import Underline from "../components/Underline"
     export default {
         name: "MacroAnalysis",
-        created() {
-
-        },
-        mounted() {
-
-        },
+        
         components: {
           Area,
           Underline
         },
-        methods: {}
+        data(){
+          return {
+             analysis:this.$language[this.$store.state.language].analysis
+          }
+        },
+        watch:{
+          languagetype() {
+            this.analysis=this.$language[this.languagetype].analysis
+          }
+        },
+        computed: {
+          languagetype: function() {
+            return this.$store.state.language;
+          }
+        }
     }
 </script>
 

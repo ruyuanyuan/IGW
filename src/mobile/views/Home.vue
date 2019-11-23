@@ -5,28 +5,28 @@
     <div class='home-banner' id='WebGL-output'>
       <div class='home-banner-content' >
         <div class='home-banner-h1'>INVINCIBLE GAME WORLD</div>
-        <div class='home-banner-title'>—全球游戏生态联盟—</div>
-        <div class='home-banner-doc'>全新的游戏经济生态基础设施</div>
+        <div class='home-banner-title'>—{{home.bannerH1}}—</div>
+        <div class='home-banner-doc'>{{home.bannerH2}}</div>
       </div>
     </div>
     <!--IGW简介-->
     <div class="introduce">
-      <Title text="IGW简介"></Title>
+      <Title :text="home.introduceTitle"></Title>
       <div class="text">
-        IGW全球游戏生态联盟致力打造一个基于区块链原生的泛社区化游戏平台，聚合游戏玩家、游戏内容生产者、开发者、数字资产交易者等多种泛社区成员，为游戏玩家提供优质的游戏内容，为开发者提供完善的游戏开发模块、数据服务及流量支持，且无中间费用，用户可使用平台通证IGC进行游戏数字资产的自由交易和跨链流通，社区内容完全由社区成员推动而实现自治管理和规范运作。
+        {{home.introduceDoc}}
       </div>
       <router-link to='/m/intro'>
-        <Raduis bg="#1862E9"></Raduis>
+        <Raduis :text='home.learnMore' bg="#1862E9"></Raduis>
       </router-link>
     </div>
     <!--区块链宏观分析-->
     <div class="blockchain">
-      <Title text="区块链行业宏观分析" color="#fff"></Title>
+      <Title :text="home.analysisTitle" color="#fff"></Title>
       <p class="text1">
-        传统游戏市场日趋成熟的同时
+        {{home.analysish1}}
       </p>
       <p class="text2">
-        也出现了诸多问题
+        {{home.analysish2}}
       </p>
       <div class="four">
         <img src="@/assets/mobileImage/blockchain_05.jpg" alt="" />
@@ -35,35 +35,35 @@
         <img src="@/assets/mobileImage/blockchain_17.png" alt="" />
       </div>
       <router-link to='/m/macroAnalysis'>
-        <Raduis></Raduis>
+        <Raduis :text='home.learnMore'></Raduis>
       </router-link>
     </div>
     <!--IGW全球游戏生态联盟-->
     <div class="alliance">
-      <Title text="IGW全球游戏生态联盟"></Title>
+      <Title :text="home.ecologyTitle"></Title>
       <div class="text">
-        为了打造一个泛社区化的去中心化信任、流量共享、资产自由流通、一键全球发行、多方共赢的全球游戏生态，IGW开启全球游戏生态联盟计划。IGW率先在中国建立联盟链超级节点，然后通过节点竞选和准入机制，面向全球建立一个分布式的超级节点联盟。届时，IGW的游戏交易所将成为全球最大的游戏资产交易平台，IGC将成为游戏交易中心的通兑货币。
+        {{home.ecologyDoc}}
       </div>
       <div class="img-box">
         <div>
           <img src="@/assets/img/gw1.png" alt="" />
-          <div>流量共享</div>
+          <div>{{home.ecologyIcon1}}</div>
         </div>
         <div>
           <img src="@/assets/img/gw2.png" alt="" />
-          <div>一键全球发行</div>
+          <div>{{home.ecologyIcon2}}</div>
         </div>
         <div>
           <img src="@/assets/img/gw3.png" alt="" />
-          <div>去中介化</div>
+          <div>{{home.ecologyIcon3}}</div>
         </div>
         <div>
           <img src="@/assets/img/gw4.png" alt="" />
-          <div>资产流通</div>
+          <div>{{home.ecologyIcon4}}</div>
         </div>
       </div>
       <router-link to='/m/ecology'>
-        <Raduis color="#000"></Raduis>
+        <Raduis :text='home.learnMore' color="#000"></Raduis>
       </router-link>
     </div>
     <!--IGW BASICS-->
@@ -72,26 +72,26 @@
         IGW Basics
       </p>
       <p>
-        为游戏而生！
+        {{home.gameCreate}}
       </p>
       <div class="texture">
         <div>
           <img src="@/assets/img/icon1.png" alt="" />
-          社区
+          {{home.gameIcon1}}
         </div>
         <div>
           <img src="@/assets/img/icon2.png" alt="" />
-          商店
+           {{home.gameIcon2}}
         </div>
       </div>
       <div class="texture">
         <div>
           <img src="@/assets/img/icon3.png" alt="" />
-          IM/群
+          {{home.gameIcon3}}
         </div>
         <div>
           <img src="@/assets/img/icon4.png" alt="" />
-          钱包
+           {{home.gameIcon4}}
         </div>
       </div>
     </div>
@@ -100,19 +100,19 @@
       <img src="@/assets/mobileImage/powerd_03.png" alt="" />
       
        <router-link to='/m/technology'>
-          <Raduis></Raduis>
+          <Raduis :text='home.learnMore'></Raduis>
         </router-link>
     </div>
     <!--IGW基金会-->
     <div class="fund">
-      <Title text="IGW基金会"></Title>
+      <Title :text="home.fundTitle"></Title>
       <div class="text">
-        IGWF注册于英属群岛直布罗陀，是全球游戏生态联盟体系的发起者。我们致力于聚合全球各地区（大洲、国家或地区）有共同志向的游戏平台、游戏开发者、运营者打造未来游戏联盟经济体，共同创建一个为游戏行业参与者走向全球市场的渠道，通过区块链技术手段及完善的解决方案实现联盟成员的相互信任、流量共享、平等共赢。
+        {{home.fundDoc}}
       </div>
       <img src="@/assets/img/map.png" alt="" />
       
       <router-link to='/m/foundation'>
-          <Raduis color="#000"></Raduis>
+          <Raduis :text='home.learnMore' color="#000"></Raduis>
       </router-link>
     </div>
     <!--路线图-->
@@ -121,18 +121,18 @@
     </div>
     <!--联系我们-->
     <div class="contact">
-      <Title text="联系我们"></Title>
+      <Title :text="home.callMe"></Title>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
         <el-form-item prop="user_name" class="form-item-input input-name">
-          <label>姓名 | NAME</label>
+          <label>{{home.name}} | NAME</label>
           <el-input type="text" maxlength="8" v-model="ruleForm.user_name"></el-input>
         </el-form-item>
         <el-form-item prop="user_phone" class="form-item-input input-phone">
-          <label>电话 | PHONE</label>
+          <label>{{home.phone}} | PHONE</label>
           <el-input type="tel" maxlength="11" v-model="ruleForm.user_phone"></el-input>
         </el-form-item>
         <el-form-item prop="user_message" class="form-item-textarea">
-          <label>留言 | MESSAGE</label>
+          <label>{{home.message}} | MESSAGE</label>
           <el-input
             type="textarea"
             maxlength="120"
@@ -141,7 +141,7 @@
           ></el-input>
         </el-form-item>
       </el-form>
-      <div class="gwi-row-more" @click='addMessage'>发送留言</div>
+      <div class="gwi-row-more" @click='addMessage'>{{home.seedMessage}}</div>
     </div>
   </div>
 </template>
@@ -320,7 +320,8 @@ export default {
         user_name: [{ validator: validatename, trigger: 'blur' }],
         user_phone: [{ validator: validatephone, trigger: 'blur' }],
         user_message: [{ validator: validatemessage, trigger: 'blur' }]
-      }
+      },
+      home:this.$language[this.$store.state.language].home
     }
   },
   methods: {
@@ -351,6 +352,16 @@ export default {
           })
         }
       })
+    }
+  },
+  watch:{
+    languagetype() {
+      this.home=this.$language[this.languagetype].home
+    }
+  },
+  computed: {
+    languagetype: function() {
+      return this.$store.state.language;
     }
   }
 }
@@ -433,8 +444,16 @@ export default {
         }
         .home-banner-doc{
           font-size:12px;
-          letter-spacing:6px;
+          letter-spacing:1px;
           margin-top:20px;
+          width:100%;
+          text-align: justify;
+          &::after {
+              display: inline-block;
+              width: 100%;
+              content: '';
+              height: 0;
+          }
         }
       }
     }
@@ -472,7 +491,8 @@ export default {
         flex-direction: column;
         font-size: 14px;
         color: #07070d;
-
+        width: 50%;
+        text-align: center;
         &:nth-child(1) {
           margin-bottom: 0.933rem;
         }
