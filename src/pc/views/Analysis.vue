@@ -79,14 +79,18 @@
         <div class='gwi-row-content'>
             <div class='gwi-row-h'>{{analysis.book}}</div>
             <div class='book_content'>
-              <div class='book_item'>
-                <div class='book_title'>在线阅读</div>
-                <div class='book_p'>中文版</div>
-              </div>
-              <div class='book_item' style='margin-left:200px'>
-                <div class='book_title'>read online</div>
-                <div class='book_p'>English</div>
-              </div>
+              <a href='IGW_WhitePaper-CN.pdf' target="_blank" rel="noopener noreferrer">
+                <div class='book_item'>
+                  <div class='book_title'>在线阅读</div>
+                  <div class='book_p'>中文版</div>
+                </div>
+              </a>
+              <a href='IGW_WhitePaper-CN.pdf' target="_blank" rel="noopener noreferrer">
+                <div class='book_item' style='margin-left:200px'>
+                  <div class='book_title'>read online</div>
+                  <div class='book_p'>English</div>
+                </div>
+              </a>
             </div>
         </div>
     </div>
