@@ -117,18 +117,22 @@
       <div class="whitePaper">
         <Underline :text="analysis.book"></Underline>
         <div class="btn">
-          <div>
-            <p>在线阅读</p>
-            <p>中文版</p>
-          </div>
-          <div>
-            <p>
-              read online
-            </p>
-            <p>
-              English
-            </p>
-          </div>
+          <a href='IGW_WhitePaper-CN.pdf' target="_blank" rel="noopener noreferrer">
+            <div>
+              <p>在线阅读</p>
+              <p>中文版</p>
+            </div>
+          </a>
+          <a href='IGW_WhitePaper-CN.pdf' target="_blank" rel="noopener noreferrer">
+            <div>
+              <p>
+                read online
+              </p>
+              <p>
+                English
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -299,7 +303,7 @@
           justify-content: space-between;
           margin-bottom: 0.987rem;
           padding-top: 0.267rem;
-          >div{
+          >a>div{
             width:3.493rem;
             height:1.36rem;
             background:rgba(24,98,233,1);
